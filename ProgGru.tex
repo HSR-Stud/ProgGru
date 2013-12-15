@@ -1,0 +1,440 @@
+%Dokumentinformationen
+\newcommand{\titleinfo}{ProgGru - Zusammenfassung}
+\newcommand{\authorinfo}{L. Leuenberger}
+\newcommand{\versioninfo}{$Revision: $ \today}
+
+% standard header
+\include{sections/header} % ./header.tex nicht editieren (Projekt LaTeX-Header benutzen)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Neue Befehle und Definitionen                
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is needed for one more subsection, ex. 1.1.1.1, is called by \paragraph{}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+% Settings which are used to set the distance above and under the sections
+\titlespacing*{\paragraph}{0pt}{2.25ex plus 1ex minus .2ex}{1.0ex plus .2ex}
+\titlespacing{\section}{0em}{0.5em}{0.5em}
+\titlespacing{\subsection}{0em}{0.5em}{0.5em}
+\titlespacing{\subsubsection}{0em}{0.5em}{0.5em}
+
+% Linksbündig
+\setlength\parindent{0ex}
+
+% This is needed for a smaller itemlist, is called by \compactenum {}
+\usepackage{paralist}
+
+% This is needed for merging some columns in a table
+\usepackage{multicol} 
+\usepackage{multirow}
+
+% This is needed for code listing
+\usepackage{listings}
+
+\definecolor{red}{rgb}{1,0,0}
+\newcommand{\verweis}[1]{$_{\textcolor{red}{\mbox{\small{Kapitel #1}}}}$}
+\newcommand{\verweishoch}[1]{${\textcolor{red}{\mbox{\small{Kapitel #1}}}}$}
+
+%Document Anfang
+\begin{document}	
+\section{Vom Problem zum Programm \verweis{1.2}}
+	\subsection{Algorithmus}
+		Der Begriff Programm ist eng mit dem Begriff Algorithmus verbunden. Algorithmen sind Vorschriften für die Lösung eines Problemes, welches die Handlungen und ihre Abfolge, also die Handlungsweise, beschreiben. Abstrakt kann man sagen, dass die folgenden Bestandteile und Eigenschaften zu einem Algorithmus gehören: \textit{(am Beispiel eines Kochrezeptes erklärt)} 
+		\begin{compactitem}
+			\item eine \textbf{Menge von Objekten}, die durch den Algorithmus bearbeitet werden \textit{(Zutaten, Geschirr, Herd, \dots)}
+			\item eine \textbf{Menge von Operationen}, die auf den Objekten ausgeführt werden \textit{(waschen, schälen, \dots)}
+			\item ein \textbf{definierter Anfangszustand}, in dem sich die Objekte zu Beginn befinden \textit{(Teller leer, Herd kalt, \dots)}
+			\item ein \textbf{gewünschter Endzustand}, in dem sich die Objekte nach der Lösung des Problems befinden sollen \textit{(gekochtes Gemüse, \dots)}
+		\end{compactitem}	
+
+	\subsection{Der euklidische Algorithmus als Beispiel}
+		\subsubsection{Das Problem}
+				Eine rechteckige Terrasse sei mit möglichst grossen quadratischen Platten auszulegen. Welche Kantenlänge haben die Platten?
+			
+		\begin{minipage}[t]{9 cm}
+			\subsubsection{Der Algorithmus}
+				\includegraphics[width=1.0\textwidth]{pics/Euklid.jpg}
+							
+				Mit Abschneidetechnik nach Euklid. Entspricht der \\
+				Ermittlung des grössten gemeinsamen Teilers (ggT): \\
+				$\frac{x_{ungek"urzt}}{y_{ungek"urzt}}=\frac{\frac{x_{ungek"urzt}}{ggT(x_{ungek"urzt},y_{ungek"urzt})}}{\frac{y_{ungek"urzt}}{ggT(x_{ungek"urzt},y_{ungek"urzt})}}=\frac{x_{gek"urzt}}{y_{gek"urzt}}$ \\
+					
+			\subsubsection{Algorithmus-Beschreibung mit Struktogramm \verweis{1.3}}
+				\includegraphics[width=1.0\textwidth]{pics/Euklid_Struktogramm.jpg}
+
+		\end{minipage}
+		%
+		\begin{minipage}[t]{9 cm}	
+			\subsubsection{Algorithmus-Beschreibung mit Pseudocode \verweis{1.2.1}}
+				\lstinputlisting[language=C,tabsize=2]{code/Euklid_Pseudo.c}
+					
+				\subsubsection{Programm}
+					\lstinputlisting[language=C,tabsize=2]{code/Euklid.c}
+							
+				\subsubsection{Trace-Tabelle \verweis{1.2.4}}
+					\includegraphics[width=0.58\textwidth]{pics/Euklid_Trace.jpg}
+	
+		\end{minipage}
+		
+\newpage
+		
+	\subsection{Nassi-Shneiderman-Diagramme \verweis{1.3}}
+		Zur Visualisierung des Kontrollflusses von Programmen, das heisst, zur grafischen Veranschaulichung ihres Ablaufes, wurden 1973 von Nassi und Shneiderman grafische Strukturen, die sogenannten Struktogramme, vorgeschlagen. Entwirft man Programme mit Nassi-Shneiderman-Diagrammen, so genügt man automatisch den Regeln der Strukturierten Programmierung.
+		
+		\begin{minipage}[t]{6 cm}
+			\subsubsection{Sequenz}
+				\includegraphics[width=1\textwidth]{pics/Nassi_Sequenz.jpg}
+				
+			\subsubsection{Block}
+				\includegraphics[width=1\textwidth]{pics/Nassi_Block.jpg}	
+					
+			\subsubsection{Einfache Alternative}
+				\includegraphics[width=1\textwidth]{pics/Nassi_einfache_Alternative.jpg}
+					
+		\end{minipage}
+		%
+		\begin{minipage}[t]{6 cm}
+			\subsubsection{Bedingte Anweisung}
+				\includegraphics[width=1\textwidth]{pics/Nassi_bedingte_Verarbeitung.jpg}
+								
+			\subsubsection{Mehrfache Alternative}
+				\includegraphics[width=1\textwidth]{pics/Nassi_mehrfache_Alternative.jpg}	
+									
+			\subsubsection{Schleife mit vorheriger Prüfung}
+				\includegraphics[width=1\textwidth]{pics/Nassi_While.jpg}
+					
+		\end{minipage}
+		%
+		\begin{minipage}[t]{6 cm}
+			\subsubsection{Endlosschlaufe}
+				\includegraphics[width=1\textwidth]{pics/Nassi_While1.jpg}
+											
+			\subsubsection{Schleife mit nachfolgender Prüfung}
+				\includegraphics[width=1\textwidth]{pics/Nassi_DoWhile.jpg}	
+					
+			\subsubsection{Abbruchanweisung}
+				\includegraphics[width=1\textwidth]{pics/Nassi_Break.jpg}	
+								
+		\end{minipage}
+		
+\section{Kontrollstrukturen \verweis{8}}
+	\begin{minipage}[t]{9 cm}
+		\subsection{Sequenz \verweis{8.1}}
+			Die Sequenz ist eine zeitlich geordnete Abfolge von Anweisungen. \\
+				\includegraphics[width=1\textwidth]{pics/Sequenz.jpg}	
+			
+	\end{minipage}
+	%
+	\begin{minipage}[t]{9 cm}
+			\subsubsection{Block}
+				\begin{compactitem}
+					\item Erfordert die Syntax genau eine Anweisung, so können dennoch mehrere Anweisungen geschrieben werden, wenn man sie in Form eines Blocks zusammenfasst.
+					\item Ein Block wird mit geschweiften Klammern eingefasst. $\{ \dots \}$ Ein Block zählt syntaktisch als eine einzige Anweisung.
+				\end{compactitem}
+				\includegraphics[width=1\textwidth]{pics/Block.jpg}
+	\end{minipage}	
+		
+	\subsection{Selektion \verweis{8.2}}
+		Von \textbf{Selektion} spricht man zum einen, wenn man eine Anweisung nur dann ausführen will, wenn eine bestimmte Bedingung zutrifft. Zum anderen möchte man mit Selektionsanweisungen zwischen zwei Möglichkeiten (entweder/oder) bzw. zwischen mehreren Möglichkeiten genau eine auswählen.
+		
+		\begin{minipage}[t]{5.5 cm}
+			\subsubsection{Einfache Alternative}
+				\lstinputlisting[language=C,tabsize=2]{code/strukturen_if_else.c}
+		\end{minipage}
+		%
+		\begin{minipage}[t]{5.5 cm}
+			\subsubsection{Bedingte Anweisung}
+				\lstinputlisting[language=C,tabsize=2]{code/strukturen_if.c}
+		\end{minipage}
+		%
+		\begin{minipage}[t]{7 cm}
+			\subsubsection{Mehrfache Alternative - else if}
+				\lstinputlisting[language=C,tabsize=2]{code/strukturen_else_if.c}
+		\end{minipage}
+		
+\newpage
+
+		\subsubsection{Mehrfache Alternative - switch case}
+			\begin{minipage}[t]{9 cm}
+				
+				\begin{compactitem}
+					\item Für eine Mehrfach-Selektion, d.h. eine Selektion unter mehreren Alternativen, kann die $switch$-Anweisung verwendet werden, falls die Alternativen ganzzahligen Werten eines Ausdrucks von einem Integer-Typ entsprechen.
+					\item Hat der Ausdruck der $switch$-Anweisung den gleichen Wert wie einer der konstanten Ausdrücke der $case$-Marken, wird die Ausführung des Programms mit der Anweisung hinter dieser $case$-Marke weitergeführt.
+					\item Stimmt keiner der konstanten Ausdrücke mit dem $switch$-Ausdruck überein, wird zu $default$ gesprungen.
+				\end{compactitem}							
+			\end{minipage}
+			\hspace*{1cm}
+			\begin{minipage}[t]{9 cm}
+				\vspace*{-0.5cm}
+				\lstinputlisting[language=C,tabsize=2]{code/strukturen_switch.c}
+			\end{minipage}
+			
+	\subsection{Iteration \verweis{8.3}}
+		\begin{minipage}[t]{4 cm}
+			\subsubsection{While}
+				\lstinputlisting[language=C,tabsize=2]{code/strukturen_while.c}
+		\end{minipage}
+		%
+		\begin{minipage}[t]{10 cm}
+			\subsubsection{For-Schleife}
+				\lstinputlisting[language=C,tabsize=2]{code/strukturen_for.c}
+		\end{minipage}
+		%
+		\begin{minipage}[t]{5 cm}
+			\subsubsection{Do-While}
+				\lstinputlisting[language=C,tabsize=2]{code/strukturen_dowhile.c}
+		\end{minipage}
+		
+		\subsubsection{Endlosschleife}
+			\begin{minipage}[c]{3 cm}
+				\lstinputlisting[language=C,tabsize=2]{code/strukturen_endlos_for.c}
+			\end{minipage}
+			%
+			\begin{minipage}[c]{3 cm}
+				\lstinputlisting[language=C,tabsize=2]{code/strukturen_endlos_while.c}
+			\end{minipage}
+		
+		\subsubsection{Wann wird welche Schleife eingesetzt?}
+			\begin{compactitem}
+				\item For-Schleife: Bei Zählschleifen, d.h. wenn die Anzahl Durchläufe (kann auch variabel sein) im
+				voraus feststeht.
+				\item Do-While-Schleife: Wenn es keine Zählschleife ist, und die Schleife muss mindestens einmal
+				durchlaufen werden
+				\item While-Schleife: In allen anderen Fällen
+			\end{compactitem}
+			
+	\subsection{Sprunganweisungen \verweis{8.4}}
+		\begin{compactitem}
+			\item break: $do-while$-, $while$-,  $for$-Schleife und $switch$-Anweisung abbrechen
+			\item continue: in den nächsten Schleifendurchgang (Schleifenkopf) springen bei $do-while$-, $while$- und $for$-Schleife 
+			\item return: aus Funktion an aufrufende Stelle zurückspringen
+			\item goto: innerhalb einer Funktion an eine Marke (Label) springen
+		\end{compactitem}
+		
+\section{Typenkonzept \verweis{5}}
+	In C wird verlangt, dass alle Variablen einen genau definierten, vom Programmierer festgelegten Typ haben. Der Typ bestimmt, welche werte eine Variable annehmen kann und welche nicht.
+	
+	\subsection{Übersicht über alle Standard-Datentypen \verweis{5.2}}
+		\begin{tabular}{|c|c|c|c|c|}
+				\hline
+					\textbf{Datentyp} & \textbf{Anzahl Bytes} & \textbf{Wertebereich (dezimal)} & Typ & Verwendung\\
+				\hline
+				\hline
+					$char$ & 1 & $-128$ bis $+127$ & Ganzzahltyp & speichern eines Zeichens\\
+				\hline
+					$unsigned$ $char$ & 1 & $0$ bis $+255$ & Ganzzahltyp & speichern eines Zeichens\\
+				\hline
+					$signed$ $char$ & 1 & $-128$ bis $+127$ & Ganzzahltyp & speichern eines Zeichens\\
+				\hline
+				\hline
+					$int$ & 4 (in der Regel) & $-2'147'483'648$ bis $+2'147'483'647$ & Ganzzahltyp & effizienteste Grösse\\
+				\hline
+					$unsigned$ $int$ & 4 (in der Regel) & $0$ bis $+4'294'967'295$ & Ganzzahltyp & effizienteste Grösse\\
+				\hline
+				\hline
+					$short$ $int$ & 2 (in der Regel) & $-32'768$ bis $+32'767$ & Ganzzahltyp & kleine ganzzahlige Werte\\
+				\hline
+					$unsigned$ $short$ $int$ & 2 (in der Regel) & $0$ bis $+65'535$ & Ganzzahltyp & kleine ganzzahlige Werte\\
+				\hline
+				\hline
+					$long$ $int$ & 4 (in der Regel) & $-2'147'483'648$ bis $+2'147'483'647$ & Ganzzahltyp & grosse ganzzahlige Werte\\
+				\hline
+					$unsigned$ $long$ $int$ & 4 (in der Regel) & $0$ bis $+4'294'967'295$ & Ganzzahltyp & grosse ganzzahlige Werte\\
+				\hline
+				\hline
+					$float$ & 4 (in der Regel) & $-3.4*10^{38}$ bis $+3.4*10^{38}$ & Gleitpunkttyp & Gleitpunktzahl\\
+				\hline
+					$double$ & 8 (in der Regel) & $-1.7*10^{308}$ bis $+1.7*10^{308}$ & Gleitpunkttyp & höhere Genauigkeit\\
+				\hline
+					$long$ $double$ & 4 (in der Regel) & $-1.1*10^{4932}$ bis $+1.1*10^{4932}$ & Gleitpunkttyp & noch höhere Genauigkeit\\
+				\hline
+			\end{tabular}
+		
+\newpage
+
+		\subsubsection{Ganzzahltypen (Integertypen) \verweis{5.2}}
+			\begin{compactitem}
+				\item Alle Integertypen ausser $char$ sind per Default vorzeichenbehaftet.
+				\item Bei $char$ ist es compilerabhängig.
+				\item Voranstellen des Schlüsselwortes $unsigned$ bewirkt, dass alle Bits für eine positive Zahl verwendet werden. (keine negativen Zahlen möglich)
+				\item Eine Überlaufproblematik (Overflow) bei $signed$ und $unsigned$ Typen ist vorhanden. Überläufe müssen vom Programmierer abgefangen werden!
+				\item Die Werte werden bei $unsigned$ Typen im Zweierkomplement abgespeichert.
+			\end{compactitem}
+			
+		\subsubsection{Gleitpunkttypen \verweis{5.2}}
+			\begin{compactitem}
+				\item Gleitpunkttypen sind sehr viel aufwendiger in der Berechnung als Integertypen.
+				\item Speziell bei kleinen Microcontrollern ohne FPU (floating point unit) sollte wenn möglich auf Gleitpunkttypen verzichtet werden.
+				\item Die Werte werden gemäss Floating Point Standart IEEE 754 abgespeichert. Die Berechnung ist zu finden im \verweishoch{5.2.3}.
+			\end{compactitem}
+			
+	\subsection{Variablen \verweis{5.3}}
+		\begin{compactitem}
+			\item Deklaration: legt nur die Art und den Typ der Variable, bzw. die Schnittstelle der Funktion fest ohne Speicherplatz zu reservieren
+			\item Definition: legt die Art und den Typ der Variablen bzw. Funktionen fest und reserviert Speicherplatz dafür \\
+			\textbf{Definition = Deklaration + Reservierung des Speicherplatzes} 
+		\end{compactitem}
+		
+	\begin{minipage}[t]{9 cm}
+		\subsubsection{Definition von Variablen \verweis{5.3.1}}
+			Eine einzelne Variable wird definiert durch eine Vereinbarung der Form:
+			\lstinputlisting[language=C,tabsize=2]{code/variablen_definition_1.c}
+			also beispielsweise durch
+			\lstinputlisting[language=C,tabsize=2]{code/variablen_definition_2.c}
+			Vom selben Typ können auch mehrere Variablen gleichzeitig definiert werden:
+			\lstinputlisting[language=C,tabsize=2]{code/variablen_definition_3.c}
+	\end{minipage}
+	\hspace*{0.5cm}
+	\begin{minipage}[t]{9 cm}
+		\subsubsection{Interne und externe Variablen \verweis{5.3.2}}
+			\begin{compactitem}
+				\item Globale (externe) Variablen: Diese Variablen stehen allen Funktionen zur Verfügung und müssen ausserhalb von Funktionen definiert werden.
+				\item Lokale (interne) Variablen: Diese Variablen stehen nur der Funktion zur Verfügung, in welcher die definiert wurden. Sie kann nicht von ausserhalb angesprochen werden.
+			\end{compactitem}
+			
+			\ \\
+			\textbf{Grundsätzlich gilt: Variablen so lokal wie möglich definieren!}
+	\end{minipage}	
+	
+	\begin{minipage}[t]{9 cm}
+		\subsubsection{Manuelle Initialisierung von Variablen \verweis{5.3.3}}
+			Jede einfache Variable kann bei ihrer Definition initialisiert werden:
+			\lstinputlisting[language=C,tabsize=2]{code/variablen_init.c}
+	\end{minipage}
+	\hspace*{0.5cm}
+	\begin{minipage}[t]{9 cm}	
+		\subsubsection{Automatische Initialisierung von Variablen \verweis{5.3.3}}
+			\begin{compactitem}
+				\item Globale Variablen werden beim Programmstart immer auf Null gesetzt.
+				\item Lokale Variablen werden \textbf{nicht} automatisch initialisiert und enthalten einen zufälligen Wert.
+			\end{compactitem}					
+	\end{minipage}		
+	
+		Es ist zu empfehlen, immer alle Variablen (lokal und global) vor dem ersten Lesezugriff manuell zu initialisieren.
+		
+	\subsubsection{Sichtbarkeit von Variablen \verweis{9.2}}
+		Die Sichtbarkeit einer Variablen bedeutet, dass man auf sie über ihren Namen zugreifen kann:
+		
+		\begin{compactitem}
+			\item Variablen in inneren Blöcken sind nach aussen nicht sichtbar.
+			\item Globale Variablen und Variablen in äusseren Blöcken sind in inneren Blöcken sichtbar.
+			\item Wird in einem Block eine lokale Variable definiert mit demselben Namen wie eine globale Variable oder wie eine Variable in einem umfassenden Block, so ist innerhalb des Blocks nur die lokale Variable sichtbar. Die globale Variable in dem umfassenden Block wird durch die Namensgleichheit verdeckt.
+			\item Wird in einem Block eine lokale Variable definiert mit demselben Namen wie eine Funktion, so ist innerhalb des Blockes nur die lokale Variable sichtbar. Die Funktion wird durch die Namensgleichheit verdeckt, da Funktionen denselben Namensraum wie Variablen haben.
+		\end{compactitem}
+			
+	\subsection{Typ-Attribute \verweis{5.4}}
+		\begin{compactitem}
+			\item const: Die Variable kann nur initialisiert werden. Weitere Änderungen sind nicht mehr
+			möglich.
+			\lstinputlisting[language=C,tabsize=2]{code/konstante_init.c}
+			\item volatile: Die Variable wird nicht (weg-)optimiert durch den Compiler, d.h. die Adressen der Variablen werden nicht geändert. Dies wird benötigt, wenn eine Variable auf einer definierten Adresse liegen muss (z.B. Memory-Mapped-Input/Output bei einem Mikrocontroller)
+		\end{compactitem}
+		\newpage	
+	\subsection {Klassifikation von Datentypen \verweis{5.5 und Kapitel 5.6}}
+		\begin{minipage}[c]{9 cm}
+			\includegraphics[width=1\textwidth]{pics/datentypen_klassifikation.jpg}
+		\end{minipage}
+		%
+		\begin{minipage}[c]{10 cm}
+			In der Programmiersprache C gibt es drei Klassen von Typen:
+			\begin{compactitem}
+				\item Objekttypen (Datentypen): Objekttypen beschreiben Variablen, \\
+				z.B. $int$
+				\item Funktionstypen: Funktionstypen beschreiben Funktionen, \\
+				z.B. $int$ $f$ $(void)$
+				\item unvollständige Typen: Der Typ $void$ ist ein unvollständiger Typ, der nicht vollständig gemacht werden kann. Er bezeichnet eine leere Menge und wird beispielsweise verwendet, wenn eine Funktion keinen Rückgabewert oder keine Übergabeparameter hat.
+			\end{compactitem}
+		\end{minipage}
+	
+\section{Funktionen}
+	\subsection{Aufgaben einer Funktion}
+		\begin{compactitem}
+			\item Gleichartige, funktional zusammengehörende Programmteile unter einem eigenen Namen zusammenfassen. Der Programmteil kann mit diesem Namen aufgerufen werden.
+			\item Einige Funktionen (im speziellen mathematische) sollen parametrisiert werden können, z.B. die Cosinusfunktion macht nur Sinn, wenn sie mit unterschiedlichen Argumenten aufgerufen werden kann.
+			\item Divide et impera (divide and conquer, teile und herrsche): Ein grosses Problem ist einfacher zu lösen, wenn es in mehrere einfachere Teilprobleme aufgeteilt wird.
+		\end{compactitem}	
+		
+	\subsection{Definition von Funktionen \verweis{9.3.1}}
+		\begin{minipage}[c]{10 cm}
+			\includegraphics[width=1\textwidth]{pics/funktionen_aufbau.jpg}
+		\end{minipage}
+		%
+		\begin{minipage}[c]{9 cm}
+			\begin{compactitem}
+				\item Funktionskopf: legt die Aufrufschnittstelle (Signatur) der Funktion fest. Er besteht aus Rückgabetyp, Funktionsname und Parameterliste.
+				\item Funktionsrumpf: Lokale Vereinbarungen und Anweisungen innerhalb eines Blocks
+			\end{compactitem}	
+		\end{minipage}	
+			
+	\subsection{Eingaben/Ausgaben einer Funktion \verweis{9.3}}
+		\begin{minipage}[t]{8.5 cm}
+			\subsubsection{Eingabedaten}
+				Es sind folgende Möglichkeiten vorhanden um Daten an Funktionen zu übergeben:
+				\begin{compactitem}
+					\item Mithilfe von Werten, welche an die Parameterliste übergeben werden
+					\item Mithilfe von globalen Variablen
+				\end{compactitem}
+		\end{minipage}
+		\hspace*{0.5cm}
+		\begin{minipage}[t]{8.5 cm}
+			\subsubsection{Ausgabedaten}
+				Es sind folgende Möglichkeiten vorhanden um Daten zurückzugeben:
+				\begin{compactitem}
+					\item Mithilfe des Rückgabewertes einer Funktion ($return$)
+					\item Mithilfe von Änderungen an Variablen, deren Adresse über die Parameterliste an die Funktion übergeben wurde
+					\item Mithilfe von Änderungen an globalen Variablen
+				\end{compactitem}	
+		\end{minipage}	
+		
+		\subsubsection{Beispiele}
+			\begin{minipage}[t]{8.5 cm}
+				\textbf{Parameterlos und ohne Rückgabewer:t}
+				\lstinputlisting[language=C,tabsize=2]{code/funktionen_parameter_1.c}
+				
+				\textbf{Parameter und ohne Rückgabewert:}
+				\lstinputlisting[language=C,tabsize=2]{code/funktionen_parameter_2.c}
+			\end{minipage}
+			\hspace*{0.5cm}
+			\begin{minipage}[t]{8.5 cm}
+				\textbf{Parameter und Rückgabewert:}
+				\lstinputlisting[language=C,tabsize=2]{code/funktionen_parameter_3.c}
+			\end{minipage}
+			
+\newpage
+
+	\subsection{Deklaration von Funktionen \verweis{9.4}}
+		Es ist festgelegt, dass die Konsistenz zwischen Funktionskopf und Funktionsaufrufen vom Compiler überprüft werden soll. Dazu muss beim Aufruf der Funktion die Schnittstelle der Funktion, d.h. der Funktionskopf, bereits bekannt sein. Steht aber die Definition einer Funktion im Programmcode erst nach ihrem Aufruf, so muss eine Vorwärtsdeklaration der Funktion erfolgen, indem vor dem Aufruf die Schnittstelle der Funktion mit dem Funktionsprototypen deklariert wird.
+		
+		\begin{minipage}[t]{9.5 cm}
+			\subsubsection{Beispiel}
+				\lstinputlisting[language=C,tabsize=2]{code/funktionen_prototyp.c}	
+		\end{minipage}
+		\hspace*{0.5cm}
+		\begin{minipage}[t]{7.5 cm}	
+			\subsubsection{Was passiert wenn der Prototyp vergessen geht?}
+				\begin{compactitem}
+					\item Fehlt der Prototyp ganz, so wird die Funktion implizit (automatisch vom System) deklariert. Ihr Rückgabetyp wird als $int$ angenommen, die Parameter werden nicht überprüft.
+					\item Wenn die Funktion später definiert wird und nicht $int$ als Rückgabetyp hat, bringt der Compiler eine Fehlermeldung.
+				\end{compactitem}
+		\end{minipage}
+		
+		\subsubsection{Funktionsprototypen in der Praxis \verweis{9.4}}
+			\begin{compactitem}
+				\item Funktionsprototypen, welche die Schnittstelle der Unit beschreiben, kommen in das entsprechenden Headerfile.
+				\item Jedes C-File, welches diese Schnittstelle nutzt, inkludiert dieses Headerfile und somit die Funktionsprototypen.
+				\item Funktionsprototypen von internen Funktionen der Unit werden zuoberst im C-File aufgelistet und kommen nicht ins Headerfile.
+			\end{compactitem}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+\end{document}
