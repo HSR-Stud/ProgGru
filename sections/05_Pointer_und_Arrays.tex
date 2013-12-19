@@ -59,6 +59,14 @@
 			\includegraphics[width=1\textwidth]{pics/pointer_beispiel_3.jpg}
 		\end{minipage}
 		
+	\subsubsection{Pointer auf void}
+		\begin{compactitem}
+			\item Wenn bei der Definition des Pointers der Typ der Variablen, auf die der Pointer zeigen soll, noch nicht feststeht, wird ein Pointer auf den Typ $void$ vereinbart.
+			\item Ein Pointer auf $void$ umgeht die Typenprüfung des Compilers. Er kann einem typisierten Pointer zugewiesen werden und er kann eine Zuweisung von einem typisierten Pointer erhalten.
+			\item Abgesehen von einem Pointer auf $void$, darf ohne explizite Typenkonvertierung kein Pointer auf einen Datentyp an einem Pointer mit einem anderen Datentyp zugewiesen werden.
+			\item Jeder Pointer kann durch Zuweisung in den Typ $void*$ und zurück umgewandelt werden, ohne dass Informationen verloren gehen.
+		\end{compactitem}
+		
 	\subsubsection{Pointerarithmetik \verweis{10.1.1}}
 		\begin{minipage}[t]{9 cm}
 			\textbf{Zuweisung:} 
@@ -183,3 +191,40 @@
 			
 		\subsubsection{Übergabe eines mehrdimensionalen Arrays}
 			\lstinputlisting[language=C,tabsize=2]{code/array_uebergabe_mehrdimensional.c}
+			
+		\subsubsection{Vergleich von char-Array und Pointer auf Zeichenkette \verweis{10.3}}
+			\begin{minipage}[t]{9 cm}
+				\textbf{char-Array:}
+				\lstinputlisting[language=C,tabsize=2]{code/pointer_char_vergleich_char.c}
+				\includegraphics[width=1\textwidth]{pics/pointer_char_vergleich_char.jpg}
+				$buffer$ entspricht der konstanten Anfangsadresse des Arrays.
+			\end{minipage}
+			\hspace*{0.5cm}
+			\begin{minipage}[t]{9 cm}
+				\textbf{Pointer auf Zeichenkette:}
+					\lstinputlisting[language=C,tabsize=2]{code/pointer_char_vergleich_pointer.c}
+					\includegraphics[width=1\textwidth]{pics/pointer_char_vergleich_pointer.jpg}
+					$pointer$ kann auf eine andere Adresse zeigen (ist nicht konstant).
+					Zugriff auf "hello" könnte dadurch verloren gehen.
+			\end{minipage}
+			
+	\subsection{Das Schlüsselweort const bei Pointern und Arrays \verweis{10.4}}
+		\begin{minipage}[t]{9 cm}
+			\subsubsection{const bei Arrays}
+				\lstinputlisting[language=C,tabsize=2]{code/const_array.c}
+				$arr[0]$, $arr[1]$ und $arr[2]$ sind alle konstant und können somit nach der Initialisierung nicht mehr abgeändert werden. \\
+				
+			\subsubsection{const bei Pointer - konstanter String}
+				\lstinputlisting[language=C,tabsize=2]{code/const_pointer_1.c}
+				Dies bedeutet nicht, dass der Pointer $text$ konstant ist, sondern dass $text$ auf einen konstanten String zeigt.
+		\end{minipage}
+		\hspace*{0.5cm}
+		\begin{minipage}[t]{9 cm}
+			\subsubsection{const bei Pointer - konstanter Pointer}
+				\lstinputlisting[language=C,tabsize=2]{code/const_pointer_2.c}
+				Hier ist nun der Pointer $text$ konstant. Die Position von $const$ ist sehr	relevant! \\
+				
+			\subsubsection{const bei Pointer - konstanter Pointer auf konstanten String}
+				\lstinputlisting[language=C,tabsize=2]{code/const_pointer_3.c}
+				Bei dieser Variante ist sowohl der Pointer $text$ als auch der String, auf welchen $text$ zeigt, konstant. 
+		\end{minipage}
