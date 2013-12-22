@@ -1,2 +1,74 @@
 \section{Stringverarbeitung}
-L. Leuenberger
+	\begin{compactitem}
+		\item Üblicherweise werden Stringfunktionen aus Bibliotheken verwendet.
+		\item Bei Speicherknappheit, lohnt es sich aber unter Umständen die Funktionen selber zu programmieren.
+	\end{compactitem}
+	
+	\subsection{Kopieren eines Strings \verweis{10.5}}
+		\begin{minipage}[t]{9 cm}
+			\subsubsection{Variante mit Laufvariable}
+				\lstinputlisting[language=C,tabsize=2]{code/string_copy_manuell_1.c}
+		\end{minipage}
+		\hspace*{0.5cm}
+		\begin{minipage}[t]{9 cm}
+			\subsubsection{Variante mit Pointer}
+				\lstinputlisting[language=C,tabsize=2]{code/string_copy_manuell_2.c}
+		\end{minipage}
+		
+	\subsection{Standardfunktionen für Strings und Speicher \verweis{10.6}}
+		\begin{compactitem}
+			\item Funktionen für die String- und Speicherverarbeitung sind prinzipiell dasselbe.
+			\item Diese Funktionen werden in der Bibliothek $string.h$ zur Verfügung gestellt.
+			\item Funktionen die mit $str$ beginnen, dienen der Stringverarbeitung und erkennen das '$\backslash0$'-Zeichen.
+			\item Funktionen die mit $mem$ beginnen, dienen der Speicherverarbeitung und erkennen das '$\backslash0$'-Zeichen nicht. Aus diesem Grund muss die Bufferlänge in Byte ebenfalls als Parameter übergeben werden.
+		\end{compactitem}
+		
+		\begin{minipage}[t]{9 cm}
+			\subsubsection{String kopieren \verweis {10.6.1.1}}
+				\lstinputlisting[language=C,tabsize=2]{code/string_copy.c}
+				\begin{compactitem}
+					\item Dies Funktion kopiert einen String von $src$ nach $dest$ inklusive '$\backslash0$'.
+					\item Hat als Rückgabewert den Pointer auf $dest$.
+					\item $dest$ muss auf einen Bereich zeigen, der genügend gross ist. Ist der zu kopierende Buffer grösser als der Zielbuffer, dann werden	nachfolgende Speicherbereiche überschrieben (Buffer overflow).
+				\end{compactitem}
+				
+			\subsubsection{Strings zusammenfügen \verweis {10.6.1.2}}
+				\lstinputlisting[language=C,tabsize=2]{code/string_concatenate.c}
+				\begin{compactitem}
+					\item Diese Funktion hängt einen String $src$ an $dest$ an, inklusive '$\backslash0$'. Das ursprüngliche '$\backslash0$ von $dest$ wird überschrieben.
+					\item Hat als Rückgabewert den Pointer auf $dest$.
+					\item $dest$ muss auf einen Bereich zeigen, der genügend gross ist. Ist der zu kopierende Buffer grösser als der Zielbuffer, dann werden	nachfolgende Speicherbereiche überschrieben (Buffer overflow).
+				\end{compactitem}
+		\end{minipage}
+		\hspace*{0.5cm}
+		\begin{minipage}[t]{9 cm}
+			\subsubsection{Strings vergleichen \verweis {10.6.1.3}}
+				\lstinputlisting[language=C,tabsize=2]{code/string_compare.c}
+				\begin{compactitem}
+					\item Dies Funktion vergleicht die beiden Strings, die auf $s1$ und $s2$ zeigen. Bei der Funktion $strncmp$ werden nur die ersten $n$ Zeichen verglichen.
+					\item Dies Funktionen hat die folgenden Rückgabewerte: \\
+						$<0$ : $*s1$ ist lexikographisch kleiner als $*s2$ \\
+						$==0$ : $*s1$ und $*s2$ sind gleich \\
+						$>0$ : $*s1$ ist lexikographisch grösser als $*s2$						
+				\end{compactitem}
+				
+			\subsubsection{Stringlänge bestimmen \verweis {10.6.1.5}}
+				\lstinputlisting[language=C,tabsize=2]{code/string_length.c}
+				\begin{compactitem}
+					\item Diese Funktion bestimmt die Länge von $s$, d.h. die Anzahl der $char$-Zeichen. Das '$\backslash0$'-Zeichen wird dabei nicht mitgezählt.
+					\item Hat als Rückgabewert die Länge von $s$.
+				\end{compactitem}
+		\end{minipage}
+		
+		\subsection{Funktionen zur Speicherbearbeitung \verweis{10.6.2}}
+			Die grundsätzlichen Unterschiede zu den Stringfunktionen sind:
+			\begin{compactitem}
+				\item Formelle Parameter sind vom Typ $void*$ statt $char*$.
+				\item Die mem-Funktionen arbeiten byteweise.
+				\item Im Gegensatz zu den $str$-Funktionen wird das '$\backslash0$'-Zeichen nicht speziell behandelt.
+				\item Die Bufferlänge muss als Parameter übergeben werden.
+			\end{compactitem}
+			
+			\subsubsection{Funktionen \verweis{10.6.2.1 bis Kapitel 10.6.2.5}}
+				\lstinputlisting[language=C,tabsize=2]{code/mem_funktionen.c}
+				Bei $memcpy()$ dürfen sich die Buffer nicht überlappen, $memmove()$ kann auch mit überlappenden Buffern umgehen.
