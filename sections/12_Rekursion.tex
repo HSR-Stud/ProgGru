@@ -1,2 +1,39 @@
-\section{Rekursion und Iteration}
-L. Leuenberger
+\section{Rekursion und Iteration \verweis{9.8}}
+	\subsection{Unterschied von Rekursion und Iteration \verweis{9.8.1}}
+		\begin{compactitem}
+			\item Rekursion: Die Funktion enthält Abschnitte, in der sie selbst direkt oder indirekt wieder	aufgerufen wird.
+			\item Iteration: Ein Algorithmus enthält Abschnitte, die innerhalb einer Ausführung mehrfach durchlaufen werden (Schleife).
+			\item Jeder rekursive Algorithmus kann auch iterativ formuliert werden.
+			\item Die rekursive Form kann eleganter sein, ist aber praktisch immer ineffizienter als die iterative Form.
+			\item Das Abbruchkriterium ist bei beiden Formen zentral.
+		\end{compactitem}
+		
+	\subsection{Anwendung von rekursiven Funktionen \verweis{9.8.1}}
+		\begin{compactitem}
+			\item Wachstums-Vorgänge 
+			\item Backtracking-Algorithmen:	z.B. Finden eines Weges durch ein Labyrinth (zurück aus Sackgasse und neuen	Weg prüfen)
+			\item Traversierungen von Suchbäumen
+			\item In Mathematik rekursiv definierte Algorithmen
+		\end{compactitem}	
+	
+	\subsection{Beispiel anhand der Fakultätsberechnung \verweis{9.8.2}}
+		\begin{minipage}[t]{9 cm}
+			\subsubsection{Iterativ}	
+				\lstinputlisting[language=C,tabsize=2]{code/rekursion_fakultaet_iterativ.c}
+		\end{minipage}
+		\hspace*{0.5cm}
+		\begin{minipage}[t]{9 cm}
+			\subsubsection{Rekursiv}
+				\lstinputlisting[language=C,tabsize=2]{code/rekursion_fakultaet_rekursiv.c}
+		\end{minipage}
+		
+	\subsection{Beispiel anhand der Binärdarstellung \verweis{9.8.3}}
+			\begin{minipage}[t]{9 cm}
+				\subsubsection{Iterativ}	
+					\lstinputlisting[language=C,tabsize=2]{code/rekursion_binaer_iterativ.c}
+			\end{minipage}
+			\hspace*{0.5cm}
+			\begin{minipage}[t]{9 cm}
+				\subsubsection{Rekursiv}
+					\lstinputlisting[language=C,tabsize=2]{code/rekursion_binaer_rekursiv.c}
+			\end{minipage}		
