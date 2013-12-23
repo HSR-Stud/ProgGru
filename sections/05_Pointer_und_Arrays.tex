@@ -97,6 +97,72 @@
 				\end{compactitem}
 		\end{minipage}	
 
+		\subsubsection{Vektoren von Pointern \verweis{10.7.1}}		
+			\begin{minipage}[c]{9 cm}
+				\includegraphics[width=1\textwidth]{pics/pointer_vektoren_1.jpg}
+			\end{minipage}
+			\hspace*{0.5cm}
+			\begin{minipage}[c]{9 cm}
+				Ein Pointer ist eine Variable, in der die Adresse eines anderen Speicherobjektes gespeichert ist. Entsprechend einem eindimensionalen Vektor von gewöhnlichen Variablen kann natürlich auch ein eindimensionaler Vektor von Pointervariablen gebildet werden.
+			\end{minipage}
+			
+			\begin{minipage}[c]{9 cm}
+				\includegraphics[width=1\textwidth]{pics/pointer_vektoren_2.jpg}
+			\end{minipage}
+			\hspace*{0.5cm}
+			\begin{minipage}[c]{9 cm}
+				Arbeitet man mit mehreren Zeichenketten, deren Länge nicht von vorherein bekannt ist, so verwendet man ein Array von Pointern auf $char$.
+			\end{minipage}
+			
+			\begin{minipage}[c]{9 cm}
+				\includegraphics[width=1\textwidth]{pics/pointer_vektoren_3.jpg}
+			\end{minipage}
+			\hspace*{0.5cm}
+			\begin{minipage}[c]{9 cm}
+				Will man nun beispielsweise diese Strings sortieren, so muss dies nicht mit Hilfe von aufwändigen Kopieraktionen für die Strings durchgeführt werden. Es werden lediglich die Pointer so verändert, dass die geforderte Sortierung erreicht wird.
+			\end{minipage}
+			
+			\begin{minipage}[c]{9 cm}
+				\lstinputlisting[language=C,tabsize=2]{code/pointer_vektoren.c}
+			\end{minipage}
+			\hspace*{0.5cm}
+			\begin{minipage}[c]{9 cm}
+				Formale Parameter für die Übergabe eines Arrays können in der Notation eines offenen Arrays ohne Längenangabe geschrieben werden. $strPointer[]$ ist demzufolge ein Vektor. Der Vektor besteht aus Pointern auf $char$.
+			\end{minipage}
+			
+		\subsubsection{Pointer auf Pointer \verweis{10.7.2}}
+			\begin{minipage}[t]{9 cm}
+				\vspace*{-0.5cm}\lstinputlisting[language=C,tabsize=2]{code/pointer_pointer.c}
+			\end{minipage}
+			\hspace*{0.5cm}
+			\begin{minipage}[t]{9 cm}
+				Die Schreibweisen $char$ **$textPointer$ und $char$ $*textPointer[]$ sind bei formalen Parametern gleichwertig. Bei der Übergabe eines Arrays wird als aktueller Parameter ein Pointer auf das erste Element eines Arrays übergeben, daher sind bei Übergabeparametern sowohl $*textPointer$ als auch $textPointer[]$ zugelassen. \\
+				\includegraphics[width=1\textwidth]{pics/pointer_pointer.jpg}
+			\end{minipage}
+			
+		\subsubsection{Pointer auf Funktionen \verweis{10.8}}
+			\begin{compactitem}
+				\item Jede Funktion befindet sich an einer definierten Adresse im Codespeicher.
+				\item Diese Adresse kann ebenfalls ermittelt werden.
+				\item Interessant wäre, dynamisch zur Laufzeit in Abhängigkeit des Programmablaufs eine unterschiedliche Funktion über einen Funktionspointer aufzurufen (z.B. um unterschiedliche Integrale zu berechnen).
+			\end{compactitem}
+			
+			\begin{minipage}[t]{10 cm}
+				\vspace*{-0.5cm}\lstinputlisting[language=C,tabsize=2]{code/pointer_funktion.c}
+			\end{minipage}
+			\hspace*{0.5cm}
+			\begin{minipage}[t]{8 cm}
+				\textbf{Vereinbarung eines Pointers}
+					\lstinputlisting[language=C,tabsize=2]{code/pointer_funktion_vereinbarung.c}
+					$ptr$ ist hier ein pointer auf eine Funktion mit Rückgabewert vom Typ $int$ und einem Übergabeparameter vom Typ $char$. Die Klammern müssen unbedingt gesetzt werden. \\
+				
+				\textbf{Zuweisung einer Funktion}
+					\lstinputlisting[language=C,tabsize=2]{code/pointer_funktion_zuweisung.c} \ \\
+					
+				\vspace*{-0.7cm}\textbf{Aufruf einer Funktion}
+					\lstinputlisting[language=C,tabsize=2]{code/pointer_funktion_aufruf.c}
+			\end{minipage}
+			
 	\subsection{Arrays \verweis{6.3}}
 		Ein Array bietet eine kompakte Zusammenfassung von mehreren Variablen des gleichen Typs.
 		
