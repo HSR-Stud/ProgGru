@@ -1,2 +1,85 @@
 \section{Komplexe Datentypen und Typennamen}
-M. Ehrler
+	\subsection{Komplexere Vereinbarungen}
+	 	Vereinbarungen in C können im Allgemeinen nicht stur von links nach rechts gelesen werden. Stattdessen muss man die Vorrang-Reihenfolge der Operatoren (siehe Kapitel 7) beachten.
+	 	\subsubsection{Array von Pointern}
+			\begin{minipage}[t]{10 cm}
+				\vspace*{-0.5cm}
+				\lstinputlisting[language=C,tabsize=2]{code/komplexe_vereinbarungen_1.c}
+			\end{minipage}
+			\hspace*{0.5cm}
+			\begin{minipage}[t]{10 cm}
+				[ ] hat Vorrang vor *\\
+				alpha ist ein Array von 8 int-Pointern
+			\end{minipage}	 	
+	 	\subsubsection{Pointer auf ein Array}
+		 	\begin{minipage}[t]{10 cm}
+		 		\vspace*{-0.5cm}
+		 		\lstinputlisting[language=C,tabsize=2]{code/komplexe_vereinbarungen_2.c}
+		 	\end{minipage}
+		 	\hspace*{0.5cm}
+		 	\begin{minipage}[t]{10 cm}
+		 		( ) hat immer Vorrang\\
+		 		alpha ist ein Pointer auf ein Array von 8 int-Werten\\
+		 		beta ist ein Pointer auf ein Array von 8 int-Pointern
+		 	\end{minipage}
+		\subsubsection{Wie viel höher ist die Adresse von (alpha+1) ?}
+			\begin{minipage}[t]{10 cm}
+				\vspace*{-0.5cm}
+				\lstinputlisting[language=C,tabsize=2]{code/komplexe_vereinbarungen_3.c}
+			\end{minipage}
+			\hspace*{0.5cm}
+			\begin{minipage}[t]{10 cm}
+				alpha ist ein Pointer auf einen Array von 5 ints,\\ d.h. alpha zeigt auf einen Bereich, der 5*4 =\\ 20 Bytes gross ist.\\ 
+				(alpha+1) liegt demnach 20 Bytes höher
+			\end{minipage}
+	 	\subsubsection{Funktion mit Pointer als Rückgabewert}
+	 		\begin{minipage}[t]{10 cm}
+	 			\vspace*{-0.5cm}
+	 			\lstinputlisting[language=C,tabsize=2]{code/komplexe_vereinbarungen_4.c}
+	 		\end{minipage}
+	 		\hspace*{0.5cm}
+	 		\begin{minipage}[t]{10 cm}
+	 			( ) hat immer Vorrang\\
+	 			foo ist eine Funktion, welche einen int-Pointer\\ zurückgibt
+	 		\end{minipage}
+	 	\subsubsection{Pointer auf eine Funktion}
+	 		\begin{minipage}[t]{10 cm}
+	 			\vspace*{-0.5cm}
+	 			\lstinputlisting[language=C,tabsize=2]{code/komplexe_vereinbarungen_5.c}
+	 		\end{minipage}
+	 		\hspace*{0.5cm}
+	 		\begin{minipage}[t]{10 cm}
+	 			( ) hat immer Vorrang, dann Assoziativität\\
+	 			pFunc ist ein Pointer auf eine Funktion, die ein\\ int zurückgibt\\
+	 			pFoo ist ein Ponter auf eine Funktion, die einen\\ int-Pointer zurückgibt\\\\
+	 		\end{minipage}
+	 		\begin{minipage}[t]{10 cm}
+	 			\vspace*{-0.5cm}
+	 			\lstinputlisting[language=C,tabsize=2]{code/komplexe_vereinbarungen_6.c}
+	 		\end{minipage}
+	 		\hspace*{0.5cm}
+	 		\begin{minipage}[t]{10 cm}
+	 			( ) hat immer Vorrang, [ ] hat Vorrang vor *\\
+	 			delta ist eine Funktion mit der Parameterliste (....)\\ und gibt einen Pointer auf ein Array von 10 Pointern\\ char zurück
+	 		\end{minipage}
+	\subsection{Typdefinitionen}
+		Bei der Definition einer Strukturvariablen muss immer das Schlüsselwort struct vorangestellt werden. Dies ist mühsam\\ $\rightarrow$ mit typedef elegantere Lösung
+		\subsubsection{Eigenschaften}
+			\begin{compactitem}
+				\item Vor allem bei komplexeren Typen (z.B. structs) macht es Sinn, einen eigenen Namen für den Typ zu definieren.\\ Das Schlüsselwort struct kann anschliessend bei der Definition von Strukturvariablen weggelassen werden
+				\item Eigene Typen können mit dem Befehl typedef definiert werden
+				\item Zwischen dem Schlüsselwort struct und \{ wird üblicherweise kein zusätzlicher Name definiert
+				\item typedefs werden im Notfall global, d.h. ausserhalb einer Funktion definiert
+				\item eigene Typen sollen mit einem Grossbuchstaben beginnen 
+			\end{compactitem} 
+		\subsubsection{Strukturdefinition mit typedef}
+			Beispiel 1:
+			\lstinputlisting[language=C,tabsize=2]{code/typedef1.c}
+			\vspace*{0.5cm}
+			Beispiel 2: 
+			\lstinputlisting[language=C,tabsize=2]{code/typedef2.c}
+		\subsubsection{Wie setzt der Compiler ein typedef um?}
+			Ein typedef ist eine reine Textersetzung. 
+			\lstinputlisting[language=C,tabsize=2]{code/typedef3.c}
+			Überall im Code wo nun das Wort Point gefunden wird, ersetzt der Compiler dieses in einem ersten Durchgang mit dem Text
+			\lstinputlisting[language=C,tabsize=2]{code/typedef4.c} 
