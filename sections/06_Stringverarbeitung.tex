@@ -20,7 +20,7 @@
 			\item Funktionen für die String- und Speicherverarbeitung sind prinzipiell dasselbe.
 			\item Diese Funktionen werden in der Bibliothek $string.h$ zur Verfügung gestellt.
 			\item Funktionen die mit $str$ beginnen, dienen der Stringverarbeitung und erkennen das '$\backslash0$'-Zeichen.
-			\item Funktionen die mit $mem$ beginnen, dienen der Speicherverarbeitung und erkennen das '$\backslash0$'-Zeichen nicht. Aus diesem Grund muss die Bufferlänge in Byte ebenfalls als Parameter übergeben werden.
+			\item Funktionen die mit $mem$ beginnen, dienen der Speicherverarbeitung und erkennen das '$\backslash0$'-Zeichen nicht. 
 		\end{compactitem}
 		
 		\begin{minipage}[t]{9 cm}
@@ -71,4 +71,4 @@
 			
 			\subsubsection{Funktionen \verweis{10.6.2.1 bis Kapitel 10.6.2.5}}
 				\lstinputlisting[language=C,tabsize=2]{code/mem_funktionen.c}
-				Bei $memcpy()$ dürfen sich die Buffer nicht überlappen, $memmove()$ kann auch mit überlappenden Buffern umgehen.
+				Bei $memcpy()$ dürfen sich die Buffer nicht überlappen, $memmove()$ kann auch mit überlappenden Buffern umgehen.\\

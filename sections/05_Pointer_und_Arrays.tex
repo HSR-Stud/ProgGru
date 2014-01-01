@@ -58,7 +58,7 @@
 		\begin{minipage}[t]{6 cm}
 			\includegraphics[width=1\textwidth]{pics/pointer_beispiel_3.jpg}
 		\end{minipage}
-		
+
 	\subsubsection{Pointer auf void}
 		\begin{compactitem}
 			\item Wenn bei der Definition des Pointers der Typ der Variablen, auf die der Pointer zeigen soll, noch nicht feststeht, wird ein Pointer auf den Typ $void$ vereinbart.
@@ -66,6 +66,10 @@
 			\item Abgesehen von einem Pointer auf $void$, darf ohne explizite Typenkonvertierung kein Pointer auf einen Datentyp an einem Pointer mit einem anderen Datentyp zugewiesen werden.
 			\item Jeder Pointer kann durch Zuweisung in den Typ $void*$ und zurück umgewandelt werden, ohne dass Informationen verloren gehen.
 		\end{compactitem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\newpage%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		
 	\subsubsection{Pointerarithmetik \verweis{10.1.1}}
 		\begin{minipage}[t]{9 cm}
@@ -187,12 +191,12 @@
 
 		\begin{minipage}[t]{9 cm}
 			\subsubsection{Äquivalenz von Array- und Pointernotation \verweis{10.1}}	
-				\includegraphics[width=1\textwidth]{pics/array_pointer.jpg}
+				\includegraphics[width=0.8\textwidth]{pics/array_pointer.jpg}
 				
 			\subsubsection{Vergleichen von Arrays \verweis{10.1}}
 			\begin{compactitem}
 				\item In C gibt es keinen Operator $==$, der zwei Arrays miteinander vergleicht.
-				\item Arrayvergleiche müssen explizit Element um Element durchgeführt werden oder der Inhalt der beiden Speicherbereiche wird mit Hilfe der Funktion	$memcmp()$ byteweise verglichen.
+				\item Arrayvergleiche müssen explizit Element um Element durchgeführt werden (z.B. mit Hilfe der Funktion $memcmp()$).
 			\end{compactitem}
 		\end{minipage}
 		\hspace*{0.5cm}
@@ -205,9 +209,13 @@
 					\item Der Arrayname (z.B. $arr$ bei $int$ $arr[5]$), als auch der Adressoperator angewandt auf den Arraynamen ($\&arr$) ergeben einen konstanten Pointer auf das erste Element des Arrays, d.h. sie ergeben dieselbe Adresse. Der Datentyp ist allerdings unterschiedlich: \\
 					Der Typ von $arr$ ist $int*$ \\
 					Der Typ von $\&arr$ ist $int$ $(*)[5]$ (Pointer auf Array mit 5 int's)
-					\item Einem Arraynamen kann kein Wert zugewiesen werden (einer Pointervariablen	schon).
+					\item Einem Arraynamen kann kein Wert zugewiesen werden.
 				\end{compactitem}
 		\end{minipage}
+		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\newpage%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		
 		\vspace*{0.1cm}
 		
@@ -293,4 +301,4 @@
 			\subsubsection{const bei Pointer - konstanter Pointer auf konstanten String}
 				\lstinputlisting[language=C,tabsize=2]{code/const_pointer_3.c}
 				Bei dieser Variante ist sowohl der Pointer $text$ als auch der String, auf welchen $text$ zeigt, konstant. 
-		\end{minipage}
+		\end{minipage} \\

@@ -3,5 +3,4 @@ if (Ausdruck 1)
 else if (Ausdruck 2)
 	Anweisung wenn Ausdruck 2 wahr;
 else 
-	Anweisung wenn alle falsch
-	(optional);
+	Anweisung wenn alle falsch (optional);

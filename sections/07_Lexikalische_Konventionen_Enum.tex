@@ -18,23 +18,36 @@
  					\item Newline
  				\end{compactitem}
  		\end{minipage}
+ 		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\newpage%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 	
+	
  	\subsection{Zeichenvorrat von C}
- 		Der Zeichenvorrat für einen Quelltext in C umfasst
+ 		Der Zeichenvorrat für einen Quelltext in C umfasst: \\
+ 		\begin{minipage}[c]{9 cm}
  			\begin{compactitem}
  				\item Grosse und kleine Buchstaben, keine Umlaute: A - Z, a - z 
  				\item Unterstrich: \_
  				\item Ziffern: 0 - 9
  				\item Leerzeichen (Blank, Space), Tabulator
- 				\item Strichpunkt (Semikolon): ;
+ 				\item Strichpunkt (Semikolon): ;	
+ 			\end{compactitem}  				
+ 		\end{minipage}
+ 		\hspace*{0.5cm}
+ 		\begin{minipage}[c]{9 cm}
+			\begin{compactitem}
  				\item Punkt (Dezimaltrennung, Selektionsoperator): .
  				\item Sonderzeichen für Operatoren: ( ) \ \ [ ] \ \ \textless  	\textgreater \ \  + \ \ - \ \ * \ \ / \ \ \% \ \ \^ \ \ \textasciitilde \ \ \& \ \ | \ \ = \ \ ! \ \ ? \ \ :
  				\item Hochkomma, Doppelhochkomma: ' \ \ "'
  				\item Geschweifte Klammern: \{ \}
  				\item (Hash), Sharp, "'Gartenhag"': \#
  				\item Backslash: \textbackslash 	
- 			\end{compactitem} 	
+ 			\end{compactitem} 
+ 		\end{minipage}
+
  	\subsection{Lexikalische Analyse des Sourcecodes}
- 		\begin{minipage}[c]{5 cm}
+ 		\begin{minipage}[c]{10 cm}
  			\subsubsection{Scanner}
  				Zeichengruppen finden. Alle zusammengehörenden
  				Zeichengruppen, welche nicht durch einen Trenner 
@@ -43,10 +56,11 @@
  		 	\subsubsection{Parser}
  		 		lexikalische Einheiten werden auf korrekte Syntax überprüft
  		\end{minipage}
- 		\hspace*{1.5cm}
- 		\begin{minipage}[c]{5 cm}
+ 		\hspace*{1cm}
+ 		\begin{minipage}[c]{4 cm}
  			\includegraphics[width=0.6\textwidth]{pics/Lexikalische_Analyse.png}
  		\end{minipage}
+ 		
  	\subsection{Lexikalische Einheiten (Token)}
  		\subsubsection{Gross- und Kleinschreibung}
  			\begin{compactitem}
@@ -103,61 +117,75 @@
 		 		\end{compactitem}
 		 		\vspace*{0.2cm} 
 		 		Beispiele: counter, maxSpeed, \\getCount(), init(), setMaxSpeed()	
-	 		\end{minipage}			
+	 		\end{minipage}	
+		
  		\subsubsection{Reservierte Wörter}
  			In ANSI C sind 32 reservierte Schlüsselwörter definiert. Sie sind stets klein geschrieben und dürfen nicht als Namen (z.B. für Variablen) verwendet werden.\\\\
- 			\begin{minipage}[t]{4 cm}
+ 			\begin{minipage}[c]{2.2 cm}
 	 			\begin{compactitem}
 	 				\item auto
 	 				\item break 				
 	 				\item case 				
-	 				\item char 				
-	 				\item const 				
-	 				\item continue				
-	 				\item default
-	 				\item do
+	 				\item char 								
 	 			\end{compactitem}
  			\end{minipage}
- 			\hspace*{0.5 cm}
- 			\begin{minipage}[t]{4 cm}
-	 			\begin{compactitem}
+ 			\begin{minipage}[c]{2.2 cm}
+	 			\begin{compactitem}	
+	 				\item const 
+	 				\item continue			
+	 				\item default
+	 				\item do		 	
+	 			\end{compactitem}
+ 			\end{minipage}
+ 			\begin{minipage}[c]{2.2 cm}
+	 			\begin{compactitem}	
 	 			 	\item double
-	  			 	\item else 			 	
+	  			 	\item else 	
 	 			 	\item enum 			 	
-	 			 	\item extern 			 	
+	 			 	\item extern 		 		 	
+	 			\end{compactitem}
+ 			\end{minipage}
+ 			\begin{minipage}[c]{2.2 cm}
+	 			\begin{compactitem}	
 	 			 	\item float			 	
 	 			 	\item for			 	
-	 			 	\item goto	
-	 			 	\item if
+	 			 	\item goto		
+	 			 	\item if			 	
 	 			\end{compactitem}
- 			\end{minipage}
- 			\hspace*{0.5 cm}
- 			\begin{minipage}[t]{4 cm}
-	 			\begin{compactitem}
+	 		\end{minipage}
+ 			\begin{minipage}[c]{2.2 cm}
+	 			\begin{compactitem} 
 	 			 	\item int			 	
-	 			 	\item long 			 	
+	 			 	\item long 		 	
 	 			 	\item register			 	
 	 			 	\item return 			 	
+	 			\end{compactitem}
+	 		\end{minipage}
+ 			\begin{minipage}[c]{2.2 cm}
+	 			\begin{compactitem}		 
 	 			 	\item short 			 	
 	 			 	\item signed 			 	
 	 			 	\item sizeof 			 	
-	 			 	\item static
+	 			 	\item static	
 	 			\end{compactitem}
- 			\end{minipage}
- 			\hspace*{0.5 cm}
- 			\begin{minipage}[t]{6 cm}
-	 			\begin{compactitem}
-	 			 	\item struct 			 	
+	 		\end{minipage}
+ 			\begin{minipage}[c]{2.2 cm}
+	 			\begin{compactitem}		 	
+	 			 	\item struct 		 	
 	 			 	\item switch 			 	
 	 			 	\item typedef 			 	
 	 			 	\item union 			 	
+	 			\end{compactitem}
+	 		\end{minipage}
+ 			\begin{minipage}[c]{2.3 cm}
+	 			\begin{compactitem}		 	
 	 			 	\item unsigned 			 	
-	 			 	\item void 			 	
+	 			 	\item void 	
 	 			 	\item volatile		 	
 	 			 	\item while
 	 			\end{compactitem}
 	 		\end{minipage}
-	 		\\\\\\
+	 		
 	 		\begin{minipage}[t]{8 cm}
 		 		\subsubsection{Symbolische Konstanten}
 		 			Haben Namen, der ihren Wert repräsentiert.
@@ -200,7 +228,6 @@
  		\begin{minipage}[t]{9 cm}
 	 		\vspace*{-0.5cm}
 	 		\lstinputlisting[language=C,tabsize=2]{code/enum1.c}
-	 		\vspace*{0.5cm}
  		\end{minipage}
  		\hspace*{0.5 cm}
  		\begin{minipage}[t]{8 cm}
@@ -210,6 +237,7 @@
  				\item Werte können auch explizit zugewiesen werden
  			\end{compactitem}
  		\end{minipage}
+ 		
  		\subsubsection{Anonyme Enumerations}
  			enums können auch verwendet werden, um ganzzahlige symbolische Konstanten zu definieren. Der enum erhält dann keinen Namen, er wird nur dazu verwendet, die einzelnen Konstanten festzulegen. Bessere Alternative zu \#define für ganzzahlige Konstanten!!
  			\lstinputlisting[language=C,tabsize=2]{code/enum2.c}
