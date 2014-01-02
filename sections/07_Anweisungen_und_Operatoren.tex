@@ -1,36 +1,36 @@
 \section{Anweisungen, Ausdrücke und Operatoren}
-	\begin{minipage}[t]{8 cm}
+	\begin{minipage}[c]{8 cm}
 		\subsection{Operatoren und Operanden}
 			\subsubsection{Stelligkeit der Operatoren}
 				\begin{compactitem}
 				 	\item Ein einstelliger (unärer) Operator hat einen einzigen Operanden wie z.B. der Minusoperator als Vorzeichenoperator.
 				 	\item Benötigt ein Operator 2 Operanden für die Verknüpfung, so spricht man von einem zweistelligen (binären) Operator.\\ 
-				 	\includegraphics[width=0.8\textwidth]{pics/binaerer_Operator.png}
 				\end{compactitem}
 	\end{minipage}
-	\hspace*{1cm}		
+	\hspace*{1cm}
+	\begin{minipage}[c]{9 cm}
+		\includegraphics[width=0.6\textwidth]{pics/binaerer_Operator.png}	
+	\end{minipage}
+		
 	\begin{minipage}[t]{9 cm}	
 		\subsection{Postfix- und Präfixoperatoren}
 			\subsubsection{Postfixoperatoren}
-				\begin{compactitem}
-				 	\item Postfix-Operatoren sind unäre Operatoren, die nach (post) ihrem Operanden stehen.\\\\
-				 	Beispiel:
-				 	\vspace*{-0.2cm}
-					\lstinputlisting[language=C,tabsize=2]{code/postfix.c}
-					\vspace*{0.1cm}
-				 	i wird auf den Bildschirm geschrieben,\\ anschliessend inkrementiert.
-				\end{compactitem}
+				Postfix-Operatoren sind unäre Operatoren, die nach (post) ihrem Operanden stehen.
+				\vspace*{-0.2cm}
+				\lstinputlisting[language=C,tabsize=2]{code/postfix.c}
+				%\vspace*{0.1cm}
+				i wird auf den Bildschirm geschrieben, anschliessend inkrementiert.
+	\end{minipage}
+	\hspace*{1cm}		
+	\begin{minipage}[t]{9 cm}
 			\subsubsection{Präfixoperatoren}
-				\begin{compactitem}
-					\item Präfix-Operatoren sind unäre Operatoren, die vor (prä) ihrem Operanden stehen.\\\\
-					Beispiel:
-					\vspace*{-0.2cm}
-					\lstinputlisting[language=C,tabsize=2]{code/praefix.c}
-					\vspace*{0.1cm}
-					i wird zuerst inkrementiert, dann auf den Bildschirm geschrieben.
-				\end{compactitem}
+				Präfix-Operatoren sind unäre Operatoren, die vor (prä) ihrem Operanden stehen.
+				\vspace*{-0.2cm}
+				\lstinputlisting[language=C,tabsize=2]{code/praefix.c}
+				%\vspace*{0.1cm}
+				i wird zuerst inkrementiert, dann auf den Bildschirm geschrieben.
 		\end{minipage}
-		\\\\
+
 		\begin{minipage}[t]{8 cm}	
 			\subsection{Ausdrücke und Anweisungen}
 				\subsubsection{Ausdrücke}
@@ -216,20 +216,23 @@
 							\item Bitweises NOT (Inverter) \textasciitilde A
 							\item Bitweises XOR A $\wedge$ B 
 						\end{compactitem}	
-				\end{minipage}\\\\
-				\begin{minipage}[t]{9 cm}
-					\subsubsection{Schiebe- (Shift-) Operatoren}
-						\begin{compactitem}
-							\item Rechts-Shift um n Bits A \textgreater \ \textgreater \ \ n
-							\item Links-Shift um n Bits A \textless \  \textless \ \ n
-						\end{compactitem}
 				\end{minipage}
-				\hspace*{0.5cm}
+				
+				\subsubsection{Schiebe- (Shift-) Operatoren}
+					\begin{compactitem}
+						\item Rechts-Shift um n Bits A \textgreater \ \textgreater \ \ n
+						\item Links-Shift um n Bits A \textless \  \textless \ \ n
+					\end{compactitem}
+										
 				\begin{minipage}[t]{9 cm}
 					\subsubsection{Bedingungsoperator (Ternärer Operator)}
 						A ? B : C\\\\
 						Ist eine verkürzte Schreibweise für
 						\lstinputlisting[language=C,tabsize=2]{code/Ternaerer_Operator.c}
+				\end{minipage}
+				\hspace*{0.5cm}
+				\begin{minipage}[t]{9 cm}
+					
 						\vspace*{0.5cm}
 						Beispiel Maximum von zwei Zahlen a, b ermitteln:
 						\lstinputlisting[language=C,tabsize=2]{code/Ternaerer_Operator2.c}
