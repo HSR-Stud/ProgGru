@@ -178,43 +178,41 @@
 \contentsline {subsubsection}{\numberline {10.1.5}Pointer auf eine Funktion}{23}{subsubsection.10.1.5}
 \contentsline {subsection}{\numberline {10.2}Typdefinitionen}{23}{subsection.10.2}
 \contentsline {subsubsection}{\numberline {10.2.1}Eigenschaften}{23}{subsubsection.10.2.1}
-\contentsline {subsubsection}{\numberline {10.2.2}Strukturdefinition mit typedef}{23}{subsubsection.10.2.2}
+\contentsline {subsubsection}{\numberline {10.2.2}Strukturdefinition mit typedef}{24}{subsubsection.10.2.2}
 \contentsline {subsubsection}{\numberline {10.2.3}Wie setzt der Compiler ein typedef um?}{24}{subsubsection.10.2.3}
-\contentsline {section}{\numberline {11}Speicherklassen}{25}{section.11}
-\contentsline {subsection}{\numberline {11.1}Adressraum eines Programms}{25}{subsection.11.1}
-\contentsline {subsubsection}{\numberline {11.1.1}Code}{25}{subsubsection.11.1.1}
-\contentsline {subsubsection}{\numberline {11.1.2}Daten}{25}{subsubsection.11.1.2}
-\contentsline {subsubsection}{\numberline {11.1.3}Stack}{25}{subsubsection.11.1.3}
-\contentsline {subsubsection}{\numberline {11.1.4}Heap}{25}{subsubsection.11.1.4}
-\contentsline {subsubsection}{\numberline {11.1.5}Anforderungen in gr\IeC {\"o}sseren Projekten}{25}{subsubsection.11.1.5}
-\contentsline {subsubsection}{\numberline {11.1.6}Information Hiding}{25}{subsubsection.11.1.6}
+\contentsline {section}{\numberline {11}Speicherklassen}{24}{section.11}
+\contentsline {subsection}{\numberline {11.1}Adressraum eines Programms}{24}{subsection.11.1}
+\contentsline {subsubsection}{\numberline {11.1.1}Code}{24}{subsubsection.11.1.1}
+\contentsline {subsubsection}{\numberline {11.1.2}Daten}{24}{subsubsection.11.1.2}
+\contentsline {subsubsection}{\numberline {11.1.3}Stack}{24}{subsubsection.11.1.3}
+\contentsline {subsubsection}{\numberline {11.1.4}Heap}{24}{subsubsection.11.1.4}
+\contentsline {subsubsection}{\numberline {11.1.5}Anforderungen in gr\IeC {\"o}sseren Projekten}{24}{subsubsection.11.1.5}
+\contentsline {subsubsection}{\numberline {11.1.6}Information Hiding}{24}{subsubsection.11.1.6}
 \contentsline {subsection}{\numberline {11.2}Programme aus mehreren Dateien}{25}{subsection.11.2}
 \contentsline {subsubsection}{\numberline {11.2.1}\IeC {\"U}bersetzungsvorgang}{25}{subsubsection.11.2.1}
 \contentsline {subsubsection}{\numberline {11.2.2}Sourcedatei (nur) compilieren}{25}{subsubsection.11.2.2}
 \contentsline {subsubsection}{\numberline {11.2.3}Objectdateien linken}{25}{subsubsection.11.2.3}
-\contentsline {subsubsection}{\numberline {11.2.4}Buildprozess}{26}{subsubsection.11.2.4}
-\contentsline {subsubsection}{\numberline {11.2.5}Abh\IeC {\"a}ngigkeiten zwischen Dateien}{26}{subsubsection.11.2.5}
-\contentsline {subsubsection}{\numberline {11.2.6}make-File}{26}{subsubsection.11.2.6}
-\contentsline {subsubsection}{\numberline {11.2.7}Feste vs. relokative Adressen}{26}{subsubsection.11.2.7}
+\contentsline {subsubsection}{\numberline {11.2.4}Buildprozess}{25}{subsubsection.11.2.4}
+\contentsline {subsubsection}{\numberline {11.2.5}Abh\IeC {\"a}ngigkeiten zwischen Dateien}{25}{subsubsection.11.2.5}
+\contentsline {subsubsection}{\numberline {11.2.6}make-File}{25}{subsubsection.11.2.6}
+\contentsline {subsubsection}{\numberline {11.2.7}Feste vs. relokative Adressen}{25}{subsubsection.11.2.7}
 \contentsline {subsection}{\numberline {11.3}Speicherklassen extern}{26}{subsection.11.3}
 \contentsline {subsubsection}{\numberline {11.3.1}externe Variablen}{26}{subsubsection.11.3.1}
-\contentsline {subsection}{\numberline {11.4}Speicherklassen static}{27}{subsection.11.4}
-\contentsline {subsubsection}{\numberline {11.4.1}static Variablen}{27}{subsubsection.11.4.1}
-\contentsline {subsubsection}{\numberline {11.4.2}static Funktionen}{27}{subsubsection.11.4.2}
-\contentsline {subsection}{\numberline {11.5}Speicherklassen bei lokalen Variablen}{27}{subsection.11.5}
-\contentsline {subsubsection}{\numberline {11.5.1}Speicherklasse auto}{27}{subsubsection.11.5.1}
-\contentsline {subsubsection}{\numberline {11.5.2}Speicherklasse register}{27}{subsubsection.11.5.2}
-\contentsline {subsubsection}{\numberline {11.5.3}Speicherklasse static}{27}{subsubsection.11.5.3}
+\contentsline {subsection}{\numberline {11.4}Speicherklassen static}{26}{subsection.11.4}
+\contentsline {subsubsection}{\numberline {11.4.1}static Variablen}{26}{subsubsection.11.4.1}
+\contentsline {subsubsection}{\numberline {11.4.2}static Funktionen}{26}{subsubsection.11.4.2}
+\contentsline {subsection}{\numberline {11.5}Speicherklassen bei lokalen Variablen}{26}{subsection.11.5}
+\contentsline {subsubsection}{\numberline {11.5.1}Speicherklasse auto}{26}{subsubsection.11.5.1}
+\contentsline {subsubsection}{\numberline {11.5.2}Speicherklasse register}{26}{subsubsection.11.5.2}
+\contentsline {subsubsection}{\numberline {11.5.3}Speicherklasse static}{26}{subsubsection.11.5.3}
 \contentsline {subsubsection}{\numberline {11.5.4}Initialisierung}{27}{subsubsection.11.5.4}
-\contentsline {section}{\numberline {12}Input/Output}{28}{section.12}
-\contentsline {section}{\numberline {13}Rekursion und Iteration $_{\leavevmode {\color {red}\unhbox \voidb@x \hbox {\relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {Kapitel 9.8}}}}$}{29}{section.13}
-\contentsline {subsection}{\numberline {13.1}Unterschied von Rekursion und Iteration $_{\leavevmode {\color {red}\unhbox \voidb@x \hbox {\relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {Kapitel 9.8.1}}}}$}{29}{subsection.13.1}
-\contentsline {subsection}{\numberline {13.2}Anwendung von rekursiven Funktionen $_{\leavevmode {\color {red}\unhbox \voidb@x \hbox {\relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {Kapitel 9.8.1}}}}$}{29}{subsection.13.2}
-\contentsline {subsection}{\numberline {13.3}Beispiel anhand der Fakult\IeC {\"a}tsberechnung $_{\leavevmode {\color {red}\unhbox \voidb@x \hbox {\relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {Kapitel 9.8.2}}}}$}{29}{subsection.13.3}
-\contentsline {subsubsection}{\numberline {13.3.1}Iterativ}{29}{subsubsection.13.3.1}
-\contentsline {subsubsection}{\numberline {13.3.2}Rekursiv}{29}{subsubsection.13.3.2}
-\contentsline {subsection}{\numberline {13.4}Beispiel anhand der Bin\IeC {\"a}rdarstellung $_{\leavevmode {\color {red}\unhbox \voidb@x \hbox {\relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {Kapitel 9.8.3}}}}$}{29}{subsection.13.4}
-\contentsline {subsubsection}{\numberline {13.4.1}Iterativ}{29}{subsubsection.13.4.1}
-\contentsline {subsubsection}{\numberline {13.4.2}Rekursiv}{29}{subsubsection.13.4.2}
-\contentsline {section}{\numberline {14}Diverses}{30}{section.14}
-\contentsline {section}{\numberline {15}Anhang: Beispiele}{31}{section.15}
+\contentsline {section}{\numberline {12}Rekursion und Iteration $_{\leavevmode {\color {red}\unhbox \voidb@x \hbox {\relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {Kapitel 9.8}}}}$}{27}{section.12}
+\contentsline {subsection}{\numberline {12.1}Unterschied von Rekursion und Iteration $_{\leavevmode {\color {red}\unhbox \voidb@x \hbox {\relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {Kapitel 9.8.1}}}}$}{27}{subsection.12.1}
+\contentsline {subsection}{\numberline {12.2}Anwendung von rekursiven Funktionen $_{\leavevmode {\color {red}\unhbox \voidb@x \hbox {\relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {Kapitel 9.8.1}}}}$}{27}{subsection.12.2}
+\contentsline {subsection}{\numberline {12.3}Beispiel anhand der Fakult\IeC {\"a}tsberechnung $_{\leavevmode {\color {red}\unhbox \voidb@x \hbox {\relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {Kapitel 9.8.2}}}}$}{27}{subsection.12.3}
+\contentsline {subsubsection}{\numberline {12.3.1}Iterativ}{27}{subsubsection.12.3.1}
+\contentsline {subsubsection}{\numberline {12.3.2}Rekursiv}{27}{subsubsection.12.3.2}
+\contentsline {subsection}{\numberline {12.4}Beispiel anhand der Bin\IeC {\"a}rdarstellung $_{\leavevmode {\color {red}\unhbox \voidb@x \hbox {\relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {Kapitel 9.8.3}}}}$}{27}{subsection.12.4}
+\contentsline {subsubsection}{\numberline {12.4.1}Iterativ}{27}{subsubsection.12.4.1}
+\contentsline {subsubsection}{\numberline {12.4.2}Rekursiv}{27}{subsubsection.12.4.2}
+\contentsline {section}{\numberline {13}Anhang: Beispiele}{27}{section.13}

@@ -72,14 +72,16 @@
 				\item typedefs werden im Notfall global, d.h. ausserhalb einer Funktion definiert
 				\item eigene Typen sollen mit einem Grossbuchstaben beginnen 
 			\end{compactitem} 
+\newpage
+	\begin{minipage}[t]{14 cm}
 		\subsubsection{Strukturdefinition mit typedef}
-			Beispiel 1:
-			\lstinputlisting[language=C,tabsize=2]{code/typedef1.c}
-			\vspace*{0.5cm}
-			Beispiel 2: 
 			\lstinputlisting[language=C,tabsize=2]{code/typedef2.c}
+	\end{minipage}
+	%
+	\begin{minipage}[t]{4.5 cm}
 		\subsubsection{Wie setzt der Compiler ein typedef um?}
 			Ein typedef ist eine reine Textersetzung. 
 			\lstinputlisting[language=C,tabsize=2]{code/typedef3.c}
 			Überall im Code wo nun das Wort Point gefunden wird, ersetzt der Compiler dieses in einem ersten Durchgang mit dem Text
 			\lstinputlisting[language=C,tabsize=2]{code/typedef4.c} 
+	\end{minipage}

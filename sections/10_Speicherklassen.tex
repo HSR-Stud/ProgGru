@@ -58,6 +58,7 @@
 					\item Interne Implementationsdetails nicht veröffentlichen $\rightarrow$ Funktionen, die in keiner weiteren Unit verwendet werden, sollen nur lokal bekannt sein
 					\item Schnittstelle möglichst klein halten
 				\end{compactitem}
+\newpage
 		\subsection{Programme aus mehreren Dateien}
 			\subsubsection{Übersetzungsvorgang}	
 				\begin{compactitem}
@@ -115,11 +116,12 @@
 				\end{minipage}
 				\subsubsection{Feste vs. relokative Adressen}
 					\begin{compactitem}
-						\item Der Linker kann den Code auf feste physikalische (fixe) Adressen legen,\\\\
-						oder\\
+						\item Der Linker kann den Code auf feste physikalische (fixe) Adressen legen,\\
+						oder
 						\item auf virtuelle Adressen, welche erst beim Programmstart auf eine physikalische
 						Adresse gelegt werden
-					\end{compactitem}			
+					\end{compactitem}		
+\newpage	
 			\subsection{Speicherklassen extern}
 				\begin{minipage}[c]{9 cm}
 					\includegraphics[width=0.7\textwidth]{pics/Speicherklasse_extern.png}\\
@@ -149,8 +151,8 @@
 						\item Gültigkeitsbereich ist der Block, in dem die Variable definiert ist
 						\item static Variablen, welche ausserhalb einer Funktion definiert sind (globale Variablen), sind nur in der Datei gültig, in der sie definiert werden
 						\item static Variablen sind nur einmal vorhanden (auch in Multithreading Umgebungen), d.h. ihr Wert wird erhalten, auch wenn die Funktion beendet ist. Beim nächsten Aufruf der Funktion geht es mit dem alten Wert weiter.
-						\item Nur einsetzen, wenn man das will!\\\\
-						static int zahl = 0;
+						\item Nur einsetzen, wenn man das will!\\
+						$static$ $int$ $zahl$ $=$ $0$;
 					\end{compactitem}
 				\end{minipage}
 				\hspace*{0.5cm}
@@ -193,6 +195,7 @@
 						welchem die Variable definiert ist
 						\item Diese Einschränkung der Sichtbarkeit ist sehr zu begrüssen
 					\end{compactitem}	
+\newpage
 				\subsubsection{Initialisierung}
 					\begin{compactitem}	
 						\item Automatische Variablen werden nicht durch das System initialisiert. Ihr Wert
