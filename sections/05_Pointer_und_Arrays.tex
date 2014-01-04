@@ -76,8 +76,8 @@
 			\textbf{Zuweisung:} 
 			\begin{compactitem}
 				\item Pointer unterschiedlicher Datentypen dürfen einander nicht zugewiesen werden (Schutzmechanismus).
-				\item Einem Pointer eines bestimmten Typs dürfen Pointer dieses Typs oder void-Pointer zugewiesen werden.
-				\item Einem void-Pointer dürfen beliebige Pointer zugewiesen werden (nützlich aber gefährlich).
+				\item Einem Pointer eines bestimmten Typs dürfen Pointer dieses Typs oder $void$-Pointer zugewiesen werden.
+				\item Einem $void$-Pointer dürfen beliebige Pointer zugewiesen werden (nützlich aber gefährlich).
 			\end{compactitem}
 			\ \\
 			\textbf{Vergleiche:} 
@@ -176,7 +176,7 @@
 				
 			\subsubsection{Zeichenketten (Strings) \verweis{6.3}}
 				\begin{compactitem}
-					\item Ein String ist in C ein Array von Zeichen (char-Array).
+					\item Ein String ist in C ein Array von Zeichen ($char$-Array).
 					\item Ein String muss in C immer mit dem Nullzeichen $'\backslash0'$ \\
 					abgeschlossen werden. Dieses benötigt eine Stelle im Array!					
 				\end{compactitem}
@@ -185,7 +185,7 @@
 		%
 		\begin{minipage}[t]{8.5 cm}
 			\subsubsection{Zugriff auf ein Arrayelement \verweis{6.3}}
-				Der Zugriff auf ein Element eines Arrays erfolgt über den Array-Index. Ist ein Array mit n Elementen definiert, so ist darauf zu achten, dass in C der Index mit 0 beginnt und mit n-1 endet.
+				Der Zugriff auf ein Element eines Arrays erfolgt über den Array-Index. Ist ein Array mit n Elementen definiert, so ist darauf zu achten, dass in C der Index mit $0$ beginnt und mit $n-1$ endet.
 				\lstinputlisting[language=C,tabsize=2]{code/array_zugriff.c}
 		\end{minipage}	
 
@@ -259,7 +259,7 @@
 				\item Bei der Übergabe eines Arrays an eine Funktion wird als Argument der Arrayname übergeben (i.e. Pointer auf erstes Element des Arrays).
 				\item Der formale Parameter für die Übergabe eines eindimensionalen Arrays kann ein offenes Array sein oder ein Pointer auf den Komponententyp des Arrays.
 				\item Die Grösse des Arrays muss immer explizit mitgegeben werden.
-				\item Zeichenketten sind char-Arrays und werden deshalb gemäss der oben erwähnten Punkte gehandhabt.
+				\item Zeichenketten sind $char$-Arrays und werden deshalb gemäss der oben erwähnten Punkte gehandhabt.
 			\end{compactitem}
 			\lstinputlisting[language=C,tabsize=2]{code/array_uebergabe.c}
 			
@@ -279,7 +279,7 @@
 					\lstinputlisting[language=C,tabsize=2]{code/pointer_char_vergleich_pointer.c}
 					\includegraphics[width=1\textwidth]{pics/pointer_char_vergleich_pointer.jpg}
 					$pointer$ kann auf eine andere Adresse zeigen (ist nicht konstant).
-					Zugriff auf "hello" könnte dadurch verloren gehen.
+					Zugriff auf $"hello"$ könnte dadurch verloren gehen.
 			\end{minipage}
 			
 	\subsection{Das Schlüsselweort const bei Pointern und Arrays \verweis{10.4}}

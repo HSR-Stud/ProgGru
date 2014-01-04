@@ -109,10 +109,10 @@
 			
 	\subsection{Typ-Attribute \verweis{5.4}}
 		\begin{compactitem}
-			\item const: Die Variable kann nur initialisiert werden. Weitere Änderungen sind nicht mehr
+			\item $const$: Die Variable kann nur initialisiert werden. Weitere Änderungen sind nicht mehr
 			möglich.
 			\lstinputlisting[language=C,tabsize=2]{code/konstante_init.c}
-			\item volatile: Die Variable wird nicht (weg-)optimiert durch den Compiler, d.h. die Adressen der Variablen werden nicht geändert. Dies wird benötigt, wenn eine Variable auf einer definierten Adresse liegen muss (z.B. Memory-Mapped-Input/Output bei einem Mikrocontroller)
+			\item $volatile$: Die Variable wird nicht (weg-)optimiert durch den Compiler, d.h. die Adressen der Variablen werden nicht geändert. Dies wird benötigt, wenn eine Variable auf einer definierten Adresse liegen muss (z.B. Memory-Mapped-Input/Output bei einem Mikrocontroller)
 		\end{compactitem}
 	
 	\subsection {Klassifikation von Datentypen \verweis{5.5 und Kapitel 5.6}}

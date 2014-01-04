@@ -66,7 +66,7 @@
  			\begin{compactitem}
  				\item C unterscheidet Gross- und Kleinschreibung, d.h. C ist case-sensitive
  				\item Die reservierten Wörter sind immer klein geschrieben
- 				\item alpha und Alpha sind unterschiedliche Namen
+ 				\item $alpha$ und $Alpha$ sind unterschiedliche Namen
  				\item Solche Feinheiten, bei denen sich zwei Namen nur in der Gross- bzw. Kleinschreibung einzelner Buchstaben unterscheiden, sollen unbedingt vermieden werden (fehleranfällig)
  			\end{compactitem}
  		\subsubsection{Kommentare}
@@ -75,11 +75,11 @@
  				\item Sie werden vom Preprocessor (allererster Compile-Schritt) entfernt. Sie sind im
  				ausführbaren Code nicht mehr enthalten.
  				\item Ein Kommentar muss mit
- 				/* und */ eingefasst werden
+ 				$/*$ und $*/$ eingefasst werden
  				\item Kommentare können auch über mehrere Zeilen reichen, sie dürfen aber nicht
  				verschachtelt werden
  				\item Zeilenkommentare beginnen mit einem Doppelslash
- 				//. Sie reichen ab dem
+ 				$//$. Sie reichen ab dem
  				Doppelslash bis zum Ende der Zeile
  			\end{compactitem}
  		\subsubsection{Namen}
@@ -93,7 +93,7 @@
 					\item Enum Konstanten
 					\item Typnamen (typedef)
 					\item Marken (Label)
-					\item Makronamen (\#define)
+					\item Makronamen ($\#define$)
  				\end{compactitem}
  			\end{minipage}
  			\hspace*{1.0cm}
@@ -116,73 +116,73 @@
 		 			\item keine Underscores
 		 		\end{compactitem}
 		 		\vspace*{0.2cm} 
-		 		Beispiele: counter, maxSpeed, \\getCount(), init(), setMaxSpeed()	
+		 		Beispiele: $counter$, $maxSpeed$, \\$getCount()$, $init()$, $setMaxSpeed()$	
 	 		\end{minipage}	
 		
  		\subsubsection{Reservierte Wörter}
  			In ANSI C sind 32 reservierte Schlüsselwörter definiert. Sie sind stets klein geschrieben und dürfen nicht als Namen (z.B. für Variablen) verwendet werden.\\\\
  			\begin{minipage}[c]{2.2 cm}
 	 			\begin{compactitem}
-	 				\item auto
-	 				\item break 				
-	 				\item case 				
-	 				\item char 								
+	 				\item $auto$
+	 				\item $break$				
+	 				\item $case$				
+	 				\item $char$ 								
 	 			\end{compactitem}
  			\end{minipage}
  			\begin{minipage}[c]{2.2 cm}
 	 			\begin{compactitem}	
-	 				\item const 
-	 				\item continue			
-	 				\item default
-	 				\item do		 	
+	 				\item $const$
+	 				\item $continue$			
+	 				\item $default$
+	 				\item $do$	 	
 	 			\end{compactitem}
  			\end{minipage}
  			\begin{minipage}[c]{2.2 cm}
 	 			\begin{compactitem}	
-	 			 	\item double
-	  			 	\item else 	
-	 			 	\item enum 			 	
-	 			 	\item extern 		 		 	
+	 			 	\item $double$
+	  			 	\item $else$	
+	 			 	\item $enum$ 			 	
+	 			 	\item $extern$ 		 		 	
 	 			\end{compactitem}
  			\end{minipage}
  			\begin{minipage}[c]{2.2 cm}
 	 			\begin{compactitem}	
-	 			 	\item float			 	
-	 			 	\item for			 	
-	 			 	\item goto		
-	 			 	\item if			 	
+	 			 	\item $float$			 	
+	 			 	\item $for$			 	
+	 			 	\item $goto$		
+	 			 	\item $if$			 	
 	 			\end{compactitem}
 	 		\end{minipage}
  			\begin{minipage}[c]{2.2 cm}
 	 			\begin{compactitem} 
-	 			 	\item int			 	
-	 			 	\item long 		 	
-	 			 	\item register			 	
-	 			 	\item return 			 	
+	 			 	\item $int$			 	
+	 			 	\item $long$ 		 	
+	 			 	\item $register$			 	
+	 			 	\item $return$ 			 	
 	 			\end{compactitem}
 	 		\end{minipage}
  			\begin{minipage}[c]{2.2 cm}
 	 			\begin{compactitem}		 
-	 			 	\item short 			 	
-	 			 	\item signed 			 	
-	 			 	\item sizeof 			 	
-	 			 	\item static	
+	 			 	\item $short$ 			 	
+	 			 	\item $signed$ 			 	
+	 			 	\item $sizeof$ 			 	
+	 			 	\item $static$	
 	 			\end{compactitem}
 	 		\end{minipage}
  			\begin{minipage}[c]{2.2 cm}
 	 			\begin{compactitem}		 	
-	 			 	\item struct 		 	
-	 			 	\item switch 			 	
-	 			 	\item typedef 			 	
-	 			 	\item union 			 	
+	 			 	\item $struct$ 		 	
+	 			 	\item $switch$ 			 	
+	 			 	\item $typedef$ 			 	
+	 			 	\item $union$ 			 	
 	 			\end{compactitem}
 	 		\end{minipage}
  			\begin{minipage}[c]{2.3 cm}
 	 			\begin{compactitem}		 	
-	 			 	\item unsigned 			 	
-	 			 	\item void 	
-	 			 	\item volatile		 	
-	 			 	\item while
+	 			 	\item $unsigned$ 			 	
+	 			 	\item $void$	
+	 			 	\item $volatile$		 	
+	 			 	\item $while$
 	 			\end{compactitem}
 	 		\end{minipage}
 	 		
@@ -190,12 +190,12 @@
 		 		\subsubsection{Symbolische Konstanten}
 		 			Haben Namen, der ihren Wert repräsentiert.
 		 			\begin{compactitem}
-		 				\item Können mit dem Präprozessor-Befehl \#define eingeführt werden:\\
-		 				\#define PI \ \ 3.1415\\
-		 				\#define LIST\_LENGTH \ \ 40
+		 				\item Können mit dem Präprozessor-Befehl $\#define$ eingeführt werden:\\
+		 				$\#define$ $PI$ \ \ $3.1415$\\
+		 				$\#define$ $LIST\_LENGTH$ \ \ $40$
 		 				\item Verhindern von "Magic numbers"
 		 				\item Vereinfacht Änderungen
-		 				\item Styleguide: Symbolische \#define-Konstanten werden aus Grossbuchstaben und Underscores gebildet (keine Kleinbuchstaben) 			 	
+		 				\item Styleguide: Symbolische $\#define$-Konstanten werden aus Grossbuchstaben und Underscores gebildet (keine Kleinbuchstaben) 			 	
 		 			\end{compactitem}
 		 	\end{minipage}
 		 	\hspace*{1.0 cm}
@@ -204,24 +204,24 @@
  					Haben keinen Namen. Werden durch ihren Wert repräsentiert.
  					\begin{compactitem}
 	 					\item Ganzzahlige Konstanten (default: int):\\
-	 					254 (dez), 035 (okt), 0x3f (hex), -34, 14L (long),\\ 14U (unsigned), 14UL (unsigned long)
+	 					$254$ $(dez)$, $035$ $(okt)$, $0x3f$ $(hex)$, $-34$, $14L$ $(long)$,\\ $14U$ $(unsigned)$, $14UL$ $(unsigned long)$
 	 					\item Zeichenkonstanten:\\
-	 					'c', '\textbackslash n', '\textbackslash x4a' (ASCII hex), '\textbackslash014' (ASCII okt), \\'\textbackslash \textbackslash', L'a' (Double Byte)
+	 					$'c'$, $'\textbackslash n'$, $'\textbackslash x4a'$ $(ASCII$ $hex)$, $'\textbackslash014'$ $(ASCII$ $okt)$, \\$'\textbackslash \textbackslash'$, $L'a'$ $(Double Byte)$
 	 					\item Gleitpunktkonstanten (default: double):\\
-	 					254.89, -13.0, 3.45e23 (exp. Schreibweise), \\ 4.65f (float-Konstante),  3.14159L (long double)
+	 					$254.89$, $-13.0$, $3.45e23$ $(exp. Schreibweise)$, \\ $4.65f$ $(float-Konstante)$,  $3.14159L$ $(long$ $double)$
 	 					\item Aufzählungskonstanten		 				 			 	
  					\end{compactitem}
  			\end{minipage}
  		\subsubsection{Konstante Zeichenkette (String)}
  			\begin{minipage}[t]{9 cm}
  				\begin{compactitem}
- 					\item begrenzt mit "'  "'
- 					\item (automatisch) abgeschlossen mit Nullzeichen '\textbackslash0'
+ 					\item begrenzt mit $"'  "'$
+ 					\item (automatisch) abgeschlossen mit Nullzeichen $'\textbackslash0'$
  				\end{compactitem}	
  			\end{minipage}
  			\hspace*{0.5cm}
  			\begin{minipage}[t]{9 cm}
- 				Beispiel "'Ritchie"'\\
+ 				Beispiel $"'Ritchie"'$\\
  				\includegraphics[width=0.6\textwidth]{pics/Zeichenkonstante.png}
  			\end{minipage}
  	\subsection{Enumerations (Aufzählungstyp)}
@@ -233,12 +233,12 @@
  		\begin{minipage}[t]{8 cm}
  			\begin{compactitem}
  				\item Aufzählungskonstanten haben einen konstanten ganzzahligen Wert.
- 				\item Die erste Konstante erhält den Wert 0, die zweite 1, etc.
+ 				\item Die erste Konstante erhält den Wert $0$, die zweite $1$, etc.
  				\item Werte können auch explizit zugewiesen werden
  			\end{compactitem}
  		\end{minipage}
  		
  		\subsubsection{Anonyme Enumerations}
- 			enums können auch verwendet werden, um ganzzahlige symbolische Konstanten zu definieren. Der enum erhält dann keinen Namen, er wird nur dazu verwendet, die einzelnen Konstanten festzulegen. Bessere Alternative zu \#define für ganzzahlige Konstanten!!
+ 			$enums$ können auch verwendet werden, um ganzzahlige symbolische Konstanten zu definieren. Der $enum$ erhält dann keinen Namen, er wird nur dazu verwendet, die einzelnen Konstanten festzulegen. Bessere Alternative zu $\#define$ für ganzzahlige Konstanten!!
  			\lstinputlisting[language=C,tabsize=2]{code/enum2.c}
  			\vspace*{0.5cm}

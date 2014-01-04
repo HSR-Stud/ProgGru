@@ -19,7 +19,7 @@
 				\vspace*{-0.2cm}
 				\lstinputlisting[language=C,tabsize=2]{code/postfix.c}
 				%\vspace*{0.1cm}
-				i wird auf den Bildschirm geschrieben, anschliessend inkrementiert.
+				$i$ wird auf den Bildschirm geschrieben, anschliessend inkrementiert.
 	\end{minipage}
 	\hspace*{1cm}		
 	\begin{minipage}[t]{9 cm}
@@ -28,7 +28,7 @@
 				\vspace*{-0.2cm}
 				\lstinputlisting[language=C,tabsize=2]{code/praefix.c}
 				%\vspace*{0.1cm}
-				i wird zuerst inkrementiert, dann auf den Bildschirm geschrieben.
+				$i$ wird zuerst inkrementiert, dann auf den Bildschirm geschrieben.
 		\end{minipage}
 
 		\begin{minipage}[t]{8 cm}	
@@ -37,14 +37,14 @@
 					\begin{compactitem}
 						\item hat immer einen Rückgabewert (Typ ist\\ durch Operanden bestimmt)
 						\item kann Teil eines grösseren Ausdrucks sein
-						\item kann eine Anweisung werden\\\\Beispiel: 3 (int) + 4.5 (double)
+						\item kann eine Anweisung werden\\\\Beispiel: $3$ $(int)$ $+$ $4.5$ $(double)$
 					\end{compactitem}
 				\subsubsection{Anweisungen}
 					\begin{compactitem}
 						\item kann keinen Rückgabewert haben
 						\item kann nicht Teil eines grösseren Ausdrucks sein
 						\item Selektions-, Iterations-, Sprung-, Ausdrucksanweisung\\\\
-						Beispiel: while (a\ \ \textgreater\ \ 14)
+						Beispiel: $while$ $(a\ \ \textgreater\ \ 14)$
 					\end{compactitem}
 		\end{minipage}
 		\hspace*{1cm}
@@ -55,10 +55,10 @@
 					Operation in dieselbe Anweisung gepackt (häufig mit Präfix- und Postfix Operatoren)
 					\item zurückhaltend einsetzen!!\\\\
 					Beispiel:\\
-					j = i++;
+					$j = i++;$
 					\ \ \ \ ist äquivalent zu\\\\
-					j = i;\\
-					i = i+1; \ \ \ \ \ \ // j++; 	
+					$j = i;$\\
+					$i = i+1;$ \ \ \ \ \ \ $// j++$; 	
 				\end{compactitem}
 		\end{minipage}
 		\subsection{Auswertungsreihenfolge}
@@ -82,14 +82,14 @@
 			\begin{minipage}[t]{8 cm}
 				\subsubsection{Beispiele zur Auswertungsreihenfolge}
 					\begin{enumerate}
-						\item *p++\\\\
-						Zuerst wird der Pointer p inkrementiert, der Rückgabewert von p++ ist p! Dieser 
-						Rückgabewert (das noch nicht inkrementierte p) wird nun dereferenziert.
-						\item *++p\\\\
-						Zuerst wird der Pointer inkrementiert, der Rückgabewert von ++p ist der inkrementierte Pointer, dann wird (das inkrementierte) p dereferenziert.
-						\item (*p)++\\\\
-						Zuerst wird der Pointer dereferenziert, anschliessend wird *p, d.h. der Inhalt der 
-						Speicherzelle, auf welche p zeigt, inkrementiert.
+						\item $*p++$\\\\
+						Zuerst wird der Pointer p inkrementiert, der Rückgabewert von $p++$ ist $p$! Dieser 
+						Rückgabewert (das noch nicht inkrementierte $p$) wird nun dereferenziert.
+						\item $*++p$\\\\
+						Zuerst wird der Pointer inkrementiert, der Rückgabewert von $++p$ ist der inkrementierte Pointer, dann wird (das inkrementierte) $p$ dereferenziert.
+						\item $(*p)++$\\\\
+						Zuerst wird der Pointer dereferenziert, anschliessend wird $*p$, d.h. der Inhalt der 
+						Speicherzelle, auf welche $p$ zeigt, inkrementiert.
 					\end{enumerate}
 			\end{minipage}\\\\
 			\begin{minipage}[t]{9 cm}
@@ -114,12 +114,12 @@
 					  \hline
 					  Operation &  *p & p \\
 					  \hline
-					  Start & 4 & 0x22cca0 \\
-					  *p++ & 4 & 0x22cca4 \\
-					  *++p & 66 & 0x22cca8 \\
-					  *(p++) & 66 & 0x22ccac \\
-					  (*p)++ & 234 & 0x22ccac \\
-					  *pp & 235 & 0x22ccac \\
+					  Start & 4 & $0x22cca0$ \\
+					  $*p++$ & 4 & $0x22cca4$ \\
+					  $*++p$ & 66 & $0x22cca8$ \\
+					  $*(p++$ & 66 & $0x22ccac$ \\
+					  $(*p)++$ & 234 & $0x22ccac$ \\
+					  $*pp$ & 235 & $0x22ccac$ \\
 					  \hline
 					\end{tabular}
 			\end{minipage}\\\\
@@ -150,38 +150,38 @@
 				\begin{minipage}[t]{9 cm}
 					\subsubsection{Unäre arithmetische Operatoren}
 						\begin{compactitem}
-							\item Positiver Vorzeichenoperator +A
-							\item Negativer Vorzeichenoperator -A
-							\item Postfix-Inkrementoperator A++
-							\item Präfix-Inkrementoperator ++A
-							\item Postfix-Dekrementoperator A- -
-							\item Präfix-Dekrementoperator - -A
+							\item Positiver Vorzeichenoperator $+A$
+							\item Negativer Vorzeichenoperator $-A$
+							\item Postfix-Inkrementoperator $A++$
+							\item Präfix-Inkrementoperator $++A$
+							\item Postfix-Dekrementoperator $A- -$
+							\item Präfix-Dekrementoperator $- -A$
 						\end{compactitem}
 				\end{minipage}
 				\hspace*{0.5cm}
 				\begin{minipage}[t]{9 cm}
 					\subsubsection{Binäre arithmetische Operatoren}
 						\begin{compactitem}
-							\item Additionsoperator A + B
-							\item Subtraktionsoperator A - B
-							\item Multiplikationsoperator A * B
-							\item Divisionsoperator A / B
-							\item Modulooperator A \% B   
+							\item Additionsoperator $A + B$
+							\item Subtraktionsoperator $A - B$
+							\item Multiplikationsoperator $A * B$
+							\item Divisionsoperator $A / B$
+							\item Modulooperator $A \% B$   
 						\end{compactitem}	
 				\end{minipage}\\\\
 				\begin{minipage}[t]{9 cm}
 					\subsubsection{Zuweisungsoperatoren}
 						\begin{compactitem}
-							\item Zuweisungsoperator A = B
+							\item Zuweisungsoperator $A = B$
 							\item Kombinierte Zuweisungsoperatoren
 							\begin{compactitem}
 								\item Alle arithmetischen und logischen Operatoren haben zusammen mit dem
 								Zuweisungsoperator eine verkürzte Form, die das Schreiben verkürzt (mehr
 								nicht)
 								\item Beispiel:\\
-								a = a / b;\\
+								$a = a / b;$\\
 								kann verkürzt geschrieben werden als\\
-								a /= b;
+								$a /= b;$
 							\end{compactitem}
 						\end{compactitem}
 				\end{minipage}
@@ -189,20 +189,20 @@
 				\begin{minipage}[t]{6 cm}
 					\subsubsection{Relationale Operatoren  (Vergleichsoperatoren)}
 						\begin{compactitem}
-							\item Gleichheitsoperator A == B
-							\item Ungleichheitsoperator A != B
-							\item Grösseroperator A \textgreater \ \ B
-							\item Kleineroperator A \textless \ \ B
-							\item Grössergleichoperator A \textgreater= B
-							\item Kleinergleichoperator A \textless= B  
+							\item Gleichheitsoperator $A == B$
+							\item Ungleichheitsoperator $A != B$
+							\item Grösseroperator $A \textgreater \ \ B$
+							\item Kleineroperator $A \textless \ \ B$
+							\item Grössergleichoperator $A \textgreater= B$
+							\item Kleinergleichoperator $A \textless= B$ 
 						\end{compactitem}	
 				\end{minipage}\\\\
 				\begin{minipage}[t]{9 cm}
 					\subsubsection{Logische Operatoren}
 						\begin{compactitem}
-							\item Logisch UND (AND) A \&\& B
-							\item Logisch ODER (OR) A || B
-							\item Logisch NICHT (NOT) !A\\\\
+							\item Logisch UND (AND) $A \&\& B$
+							\item Logisch ODER (OR) $A || B$
+							\item Logisch NICHT (NOT) $!A$\\\\
 							0 = false, falsch\\
 							1 = true, wahr (genauer: ungleich 0)
 						\end{compactitem}
@@ -211,22 +211,22 @@
 				\begin{minipage}[t]{9 cm}
 					\subsubsection{Bit-Operatoren}
 						\begin{compactitem}
-							\item Bitweises AND A \& B
-							\item Bitweises OR A | B
-							\item Bitweises NOT (Inverter) \textasciitilde A
-							\item Bitweises XOR A $\wedge$ B 
+							\item Bitweises AND $A \& B$
+							\item Bitweises OR $A | B$
+							\item Bitweises NOT (Inverter) $\textasciitilde A$
+							\item Bitweises XOR $A \wedge B$ 
 						\end{compactitem}	
 				\end{minipage}
 				
 				\subsubsection{Schiebe- (Shift-) Operatoren}
 					\begin{compactitem}
-						\item Rechts-Shift um n Bits A \textgreater \ \textgreater \ \ n
-						\item Links-Shift um n Bits A \textless \  \textless \ \ n
+						\item Rechts-Shift um n Bits $A \textgreater \ \textgreater \ \ n$
+						\item Links-Shift um n Bits $A \textless \  \textless \ \ n$
 					\end{compactitem}
 										
 				\begin{minipage}[t]{9 cm}
 					\subsubsection{Bedingungsoperator (Ternärer Operator)}
-						A ? B : C\\\\
+						$A ? B : C$\\\\
 						Ist eine verkürzte Schreibweise für
 						\lstinputlisting[language=C,tabsize=2]{code/Ternaerer_Operator.c}
 				\end{minipage}
@@ -265,7 +265,7 @@
 					\subsubsection{Erlaubte Typenumwandlung}
 						\begin{compactitem}
 							\item Zwischen skalaren Typen (Integer, Floating Points, Pointer)
-							\item Von skalarem Typ in void
+							\item Von skalarem Typ in $void$
 						\end{compactitem}
 				\end{minipage}
 			\subsection{Gültigkeitsbereiche von Namen (Scope)}				
@@ -275,8 +275,8 @@
 					\item (Globale) Variablen, welche in einer anderen Datei definiert werden, können 
 					mit Hilfe des extern-Statements bekannt gemacht werden
 					\item Durch das extern-Statement wird kein Speicherplatz reserviert.\\
-					extern int Foo\_globalVariable;
+					$extern$ $int$ $Foo\_globalVariable$;
 					\item Funktionsprototypen und Definitionen, die von anderen Modulen genutzt
 					werden können (Schnittstellen), werden in einer Headerdatei definiert
-					\item Durch \#include der Headerdatei wird der Header geladen und die Namen somit bekannt gemacht.
+					\item Durch $\#include$ der Headerdatei wird der Header geladen und die Namen somit bekannt gemacht.
 				\end{compactitem}

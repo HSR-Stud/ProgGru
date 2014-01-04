@@ -58,7 +58,11 @@
 					\item Interne Implementationsdetails nicht veröffentlichen $\rightarrow$ Funktionen, die in keiner weiteren Unit verwendet werden, sollen nur lokal bekannt sein
 					\item Schnittstelle möglichst klein halten
 				\end{compactitem}
-\newpage
+				
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\newpage%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 		\subsection{Programme aus mehreren Dateien}
 			\subsubsection{Übersetzungsvorgang}	
 				\begin{compactitem}
@@ -72,7 +76,7 @@
 				\subsubsection{Sourcedatei (nur) compilieren}
 					gcc -c foo.c\\
 					\begin{compactitem}
-						\item Dadurch entsteht noch kein ausführbares Programm, sondern nur die Dateifoo.o, der Objectcode
+						\item Dadurch entsteht noch kein ausführbares Programm, sondern nur die $Dateifoo.o$, der Objectcode
 						\item Dies muss mit allen *.c - Dateien gemacht werden
 					\end{compactitem}
 			\end{minipage}
@@ -125,8 +129,8 @@
 			\subsection{Speicherklassen extern}
 				\begin{minipage}[c]{9 cm}
 					\includegraphics[width=0.7\textwidth]{pics/Speicherklasse_extern.png}\\
-					// ext2.c\\
-					extern int zahl; \ \ \ \ // zahl wird bekannt gemacht\\
+					$//$ $ext2.c$\\
+					$extern$ $int$ $zahl;$ \ \ \ \ // zahl wird bekannt gemacht\\
 					...
 				\end{minipage}
 				\hspace*{0.5cm}	
@@ -140,7 +144,7 @@
 							\item Eine manuelle Initialisierung ist nur bei der Definition möglich
 							\item Globale Variablen, welche nicht manuell initialisiert werden, werden
 							automatisch mit 0 initialisiert
-							\item extern-Deklarationen werden üblicherweise in einer Headerdatei deklariert. Am Beginn der .c - Datei wird die Headerdatei mit \#include eingefügt
+							\item extern-Deklarationen werden üblicherweise in einer Headerdatei deklariert. Am Beginn der .c - Datei wird die Headerdatei mit $\#include$ eingefügt
 						\end{compactitem}
 				\end{minipage}	
 			\subsection{Speicherklassen static}
@@ -163,40 +167,44 @@
 						sichtbar
 						\item Alle Funktionen, welche nicht aussen (für andere Units) sichtbar sein
 						sollen, sollten deshalb als static definiert werden
-						\item Mit anderen Worten: alle Funktionen static definieren, ausser jene, welche die Schnittstelle
+						\item Mit anderen Worten: alle Funktionen $static$ definieren, ausser jene, welche die Schnittstelle
 						nach aussen bilden
 					\end{compactitem}
 				\end{minipage}
 			\subsection{Speicherklassen bei lokalen Variablen}
 				\subsubsection{Speicherklasse auto}
 					\begin{compactitem}
-						\item Variablen der Speicherklasse auto werden auf dem Stack angelegt
+						\item Variablen der Speicherklasse $auto$ werden auf dem Stack angelegt
 						\item Wenn bei einer Variablen keine Speicherklasse angegeben wird, so hat sie
-						"automatisch" die Speicherklasse auto, d.h. auto ist der Default
-						\item Die Speicherklasse auto wird praktisch nie explizit angegeben 
+						"automatisch" die Speicherklasse $auto$, d.h. $auto$ ist der Default
+						\item Die Speicherklasse $auto$ wird praktisch nie explizit angegeben 
 						\item Automatische Variablen werden beim Verlassen des Blocks, in dem sie
 						definiert wurden, vom System automatisch aus dem Speicher entfernt
 					\end{compactitem}
 				\subsubsection{Speicherklasse register}
 					\begin{compactitem}
-						\item Bei Angabe der Speicherklasse register wird dem Compiler empfohlen, für
+						\item Bei Angabe der Speicherklasse $register$ wird dem Compiler empfohlen, für
 						diese Variable ein Register (schnellste Speicherzelle) zu verwenden
 						\item Der Compiler wird dies versuchen, eine Garantie besteht aber nicht, da dem
 						Compiler z.B. u.U. gar nicht genügend Register zur Verfügung stehen
 						\item Bei formalen Parametern ist das die einzig mögliche explizite Speicherklasse
-						\item Der Compiler optimiert meist gut, register soll deshalb üblicherweise nicht
+						\item Der Compiler optimiert meist gut, $register$ soll deshalb üblicherweise nicht
 						angegeben werden
 					\end{compactitem}				
 				\subsubsection{Speicherklasse static}
 					\begin{compactitem}
-						\item Wie bei allen Variablen der Speicherklasse static werden diese Variablen imglobalen Datenbereich (nicht auf dem Stack) angelegt
-						\item Das einzige spezielle von lokalen static Variablen gegenüber globalen 
-						static Variablen ist, dass die Sichtbarkeit auf den Block beschränkt ist, in
+						\item Wie bei allen Variablen der Speicherklasse $static$ werden diese Variablen imglobalen Datenbereich (nicht auf dem Stack) angelegt
+						\item Das einzige spezielle von lokalen $static$ Variablen gegenüber globalen 
+						$static$ Variablen ist, dass die Sichtbarkeit auf den Block beschränkt ist, in
 						welchem die Variable definiert ist
 						\item Diese Einschränkung der Sichtbarkeit ist sehr zu begrüssen
 					\end{compactitem}	
-\newpage
+					
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\newpage%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 				\subsubsection{Initialisierung}
+				
 					\begin{compactitem}	
 						\item Automatische Variablen werden nicht durch das System initialisiert. Ihr Wert
 						ist deshalb vor der manuellen Initialisierung undefiniert.
