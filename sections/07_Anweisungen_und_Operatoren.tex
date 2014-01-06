@@ -1,6 +1,6 @@
-\section{Anweisungen, Ausdrücke und Operatoren}
-	\begin{minipage}[c]{8 cm}
-		\subsection{Operatoren und Operanden}
+\section{Anweisungen, Ausdrücke und Operatoren \verweis{7}}
+	\begin{minipage}[c]{10 cm}
+		\subsection{Operatoren und Operanden \verweis{7.1}}
 			\subsubsection{Stelligkeit der Operatoren}
 				\begin{compactitem}
 				 	\item Ein einstelliger (unärer) Operator hat einen einzigen Operanden wie z.B. der Minusoperator als Vorzeichenoperator.
@@ -32,7 +32,7 @@
 		\end{minipage}
 
 		\begin{minipage}[t]{8 cm}	
-			\subsection{Ausdrücke und Anweisungen}
+			\subsection{Ausdrücke und Anweisungen \verweis{7.2}}
 				\subsubsection{Ausdrücke}
 					\begin{compactitem}
 						\item hat immer einen Rückgabewert (Typ ist\\ durch Operanden bestimmt)
@@ -49,7 +49,7 @@
 		\end{minipage}
 		\hspace*{1cm}
 		\begin{minipage}[t]{9 cm}
-			\subsection{Nebeneffekte}
+			\subsection{Nebeneffekte \verweis{7.3}}
 				\begin{compactitem}
 					\item Bei Nebeneffekten wird nebst der eigentlichen Aufgabe noch eine weitere
 					Operation in dieselbe Anweisung gepackt (häufig mit Präfix- und Postfix Operatoren)
@@ -61,7 +61,7 @@
 					$i = i+1;$ \ \ \ \ \ \ $// j++$; 	
 				\end{compactitem}
 		\end{minipage}
-		\subsection{Auswertungsreihenfolge}
+		\subsection{Auswertungsreihenfolge \verweis{7.4}}
 			\subsubsection{Regeln}
 				\begin{enumerate}
 					\item Wie in der Mathematik werden als erstes Teilausdrücke in Klammern ausgewertet.
@@ -124,7 +124,7 @@
 					\end{tabular}
 			\end{minipage}\\\\
 				\begin{minipage}[t]{13 cm}
-				\subsection{L-Werte und R-Werte}
+				\subsection{L-Werte und R-Werte \verweis{7.5}}
 					\begin{compactitem}
 						\item Ausdrücke haben eine unterschiedliche Bedeutung, je nachdem, ob sie links oder rechts vom Zuweisungsoperator stehen.
 						\item Ein Ausdruck stellt einen L-Wert (lvalue oder left value) dar, wenn er
@@ -146,7 +146,7 @@
 						\item Auf einen rvalue wird nur lesend zugegriffen
 						\item Es gibt auch nicht modifizierbare lvalues. Auf diese kann auch nur lesend zugegriffen werden.
 					\end{compactitem}
-			\subsection{Operatoren im einzelnen}
+			\subsection{Operatoren im einzelnen \verweis{7.6}}
 				\begin{minipage}[t]{9 cm}
 					\subsubsection{Unäre arithmetische Operatoren}
 						\begin{compactitem}
@@ -239,7 +239,7 @@
 						entspricht:
 						\lstinputlisting[language=C,tabsize=2]{code/Ternaerer_Operator3.c}	
 				\end{minipage}
-			\subsection{Type Cast (Typumwandlungsoperator)}	
+			\subsection{Type Cast (Typumwandlungsoperator) \verweis{7.7}}	
 				\begin{minipage}[t]{9 cm}
 					\subsubsection{Implizite Typumwandlung}
 						Bei der impliziten Typumwandlung wird Umwandlung nicht im Code aufgeführt. Sie wird vom Compiler automatisch anhand der Datentypen von Variablen bzw. Ausdrücken erkannt und durchgeführt.\\\\

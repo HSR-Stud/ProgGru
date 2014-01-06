@@ -1,6 +1,6 @@
-\section{Lexikalische Konventionen, Enum}
+\section{Lexikalische Konventionen, Enum \verweis{4}}
  	\subsection{Bestandteile des Sourcecodes}
- 		\begin{minipage}[t]{8 cm}
+ 		\begin{minipage}[t]{5.5 cm}
  			\subsubsection{Lexikalische Elemente ("'Text"')}
  				\begin{compactitem}
  					\item Befehle
@@ -9,7 +9,7 @@
  					\item ... 
  				\end{compactitem}
  		\end{minipage}
- 		\hspace*{0.5cm}
+ 		\hspace*{3.5cm}
  		\begin{minipage}[t]{8 cm}
  			\subsubsection{Trennzeichen}
  				\begin{compactitem}
@@ -23,7 +23,7 @@
 \newpage%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 	
 	
- 	\subsection{Zeichenvorrat von C}
+ 	\subsection{Zeichenvorrat von C \verweis{4.1}}
  		Der Zeichenvorrat für einen Quelltext in C umfasst: \\
  		\begin{minipage}[c]{9 cm}
  			\begin{compactitem}
@@ -61,7 +61,7 @@
  			\includegraphics[width=0.6\textwidth]{pics/Lexikalische_Analyse.png}
  		\end{minipage}
  		
- 	\subsection{Lexikalische Einheiten (Token)}
+ 	\subsection{Lexikalische Einheiten (Token) \verweis{4.2}}
  		\subsubsection{Gross- und Kleinschreibung}
  			\begin{compactitem}
  				\item C unterscheidet Gross- und Kleinschreibung, d.h. C ist case-sensitive
@@ -82,7 +82,7 @@
  				$//$. Sie reichen ab dem
  				Doppelslash bis zum Ende der Zeile
  			\end{compactitem}
- 		\subsubsection{Namen}
+ 		\subsubsection{Namen \verweis{4.2.1}}
  			\begin{minipage}[t]{5 cm}
  				Namen bezeichnen in C:
  				\begin{compactitem}
@@ -119,7 +119,7 @@
 		 		Beispiele: $counter$, $maxSpeed$, \\$getCount()$, $init()$, $setMaxSpeed()$	
 	 		\end{minipage}	
 		
- 		\subsubsection{Reservierte Wörter}
+ 		\subsubsection{Reservierte Wörter \verweis{4.2.2}}
  			In ANSI C sind 32 reservierte Schlüsselwörter definiert. Sie sind stets klein geschrieben und dürfen nicht als Namen (z.B. für Variablen) verwendet werden.\\\\
  			\begin{minipage}[c]{2.2 cm}
 	 			\begin{compactitem}
@@ -187,7 +187,7 @@
 	 		\end{minipage}
 	 		
 	 		\begin{minipage}[t]{8 cm}
-		 		\subsubsection{Symbolische Konstanten}
+		 		\subsubsection{Symbolische Konstanten \verweis{4.2.3}}
 		 			Haben Namen, der ihren Wert repräsentiert.
 		 			\begin{compactitem}
 		 				\item Können mit dem Präprozessor-Befehl $\#define$ eingeführt werden:\\
@@ -200,7 +200,7 @@
 		 	\end{minipage}
 		 	\hspace*{1.0 cm}
 		 	\begin{minipage}[t]{9 cm}
- 				\subsubsection{Literale Konstanten}
+ 				\subsubsection{Literale Konstanten \verweis{4.2.3}}
  					Haben keinen Namen. Werden durch ihren Wert repräsentiert.
  					\begin{compactitem}
 	 					\item Ganzzahlige Konstanten (default: int):\\
@@ -212,7 +212,7 @@
 	 					\item Aufzählungskonstanten		 				 			 	
  					\end{compactitem}
  			\end{minipage}
- 		\subsubsection{Konstante Zeichenkette (String)}
+ 		\subsubsection{Konstante Zeichenkette (String) \verweis{4.2.4}}
  			\begin{minipage}[t]{9 cm}
  				\begin{compactitem}
  					\item begrenzt mit $"'  "'$

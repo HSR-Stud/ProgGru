@@ -1,5 +1,5 @@
-\section{Speicherklassen}
-	\subsection{Adressraum eines Programms}
+\section{Speicherklassen \verweis{13}}
+	\subsection{Adressraum eines Programms \verweis{13.1}}
 		\begin{minipage}[t]{10 cm}
 			Der Adressraum eines ablauffähigen C-Programms - also einer Datei programm.exe - besteht aus den vier Segmenten: Code, Daten, Stack und Heap.\\\\
 			\begin{minipage}[c]{4 cm}
@@ -63,7 +63,7 @@
 \newpage%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-		\subsection{Programme aus mehreren Dateien}
+		\subsection{Programme aus mehreren Dateien \verweis{13.2}}
 			\subsubsection{Übersetzungsvorgang}	
 				\begin{compactitem}
 					\item Quelldateien werden getrennt übersetzt
@@ -126,7 +126,7 @@
 						Adresse gelegt werden
 					\end{compactitem}		
 \newpage	
-			\subsection{Speicherklassen extern}
+			\subsection{Speicherklassen extern \verweis{13.3}}
 				\begin{minipage}[c]{9 cm}
 					\includegraphics[width=0.7\textwidth]{pics/Speicherklasse_extern.png}\\
 					$//$ $ext2.c$\\
@@ -147,7 +147,7 @@
 							\item extern-Deklarationen werden üblicherweise in einer Headerdatei deklariert. Am Beginn der .c - Datei wird die Headerdatei mit $\#include$ eingefügt
 						\end{compactitem}
 				\end{minipage}	
-			\subsection{Speicherklassen static}
+			\subsection{Speicherklassen static \verweis{13.4}}
 				\begin{minipage}[t]{9 cm}
 					\subsubsection{static Variablen}
 					\begin{compactitem}
@@ -171,7 +171,7 @@
 						nach aussen bilden
 					\end{compactitem}
 				\end{minipage}
-			\subsection{Speicherklassen bei lokalen Variablen}
+			\subsection{Speicherklassen bei lokalen Variablen \verweis{13.5}}
 				\subsubsection{Speicherklasse auto}
 					\begin{compactitem}
 						\item Variablen der Speicherklasse $auto$ werden auf dem Stack angelegt
@@ -203,7 +203,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 \newpage%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-				\subsubsection{Initialisierung}
+				\subsubsection{Initialisierung \verweis{13.6}}
 				
 					\begin{compactitem}	
 						\item Automatische Variablen werden nicht durch das System initialisiert. Ihr Wert
