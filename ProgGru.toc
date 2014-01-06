@@ -216,5 +216,5 @@
 \contentsline {subsubsection}{\numberline {12.4.1}Iterativ}{27}{subsubsection.12.4.1}
 \contentsline {subsubsection}{\numberline {12.4.2}Rekursiv}{27}{subsubsection.12.4.2}
 \contentsline {section}{\numberline {13}Anhang: Beispiele}{28}{section.13}
-\contentsline {subsubsection}{\numberline {13.0.3}Ganze Zahl in String konvertieren (Array)}{28}{subsubsection.13.0.3}
-\contentsline {subsubsection}{\numberline {13.0.4}Russische Multiplikation}{29}{subsubsection.13.0.4}
+\contentsline {subsection}{\numberline {13.1}Ganze Zahl in String konvertieren (Array)}{28}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Russische Multiplikation}{29}{subsection.13.2}
