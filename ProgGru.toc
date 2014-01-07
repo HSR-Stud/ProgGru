@@ -218,3 +218,4 @@
 \contentsline {section}{\numberline {13}Anhang: Beispiele}{28}{section.13}
 \contentsline {subsection}{\numberline {13.1}Ganze Zahl in String konvertieren (Array)}{28}{subsection.13.1}
 \contentsline {subsection}{\numberline {13.2}Russische Multiplikation}{29}{subsection.13.2}
+\contentsline {subsection}{\numberline {13.3}Sortieren von Werten}{30}{subsection.13.3}
